@@ -27,8 +27,25 @@
 
 \section{Kinh nghiệm Làm việc}
 
+% --- VNPT (Hiện tại) ---
+\begin{twocolentry}{\textit{Tháng 4 2026 -- Hiện tại}}
+    \textbf{Công ty Công nghệ Thông tin VNPT (VNPT-IT)} \\[4pt]
+    \textit{Kỹ sư DevSecOps \& Platform (Kubernetes / MLOps)}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Chịu trách nhiệm chính nền tảng \textbf{Kubernetes (RKE2)} production on-premise --- tổng \textbf{140 vCPU / hơn 400 GB RAM / NVIDIA A100 80GB}, vận hành \textbf{trên 100 pod} thuộc hơn 20 namespace, tỉ lệ workload khỏe mạnh 99\%.
+        \item Xây dựng và vận hành \textbf{hơn 30 pipeline CI/CD} (Jenkins multibranch, GitLab CI) cho dịch vụ .NET, Go, Node.js và Python/AI; chuẩn hóa khuôn pipeline và tự động đồng bộ sang 18 repository qua GitLab API.
+        \item \textbf{DevSecOps:} tích hợp quét bảo mật vào mọi pipeline --- \textbf{Trivy} (ảnh container), \textbf{gitleaks} (lộ bí mật), \textbf{SonarQube} (chất lượng mã); gia cố workload chạy không quyền root với \texttt{seccomp} và phân tách mạng bằng NetworkPolicy.
+        \item \textbf{MLOps:} vận hành hạ tầng GPU (A100 80GB) và CI/CD cho các dịch vụ mô hình thị giác máy tính, cùng \textbf{MLflow} và luồng dữ liệu \textbf{Airflow / Spark / NiFi}.
+        \item Triển khai \textbf{Debezium / Kafka Connect} bắt biến đổi dữ liệu (CDC) trên PostgreSQL logical replication; vận hành Kafka, Redis, Elasticsearch, MongoDB, PostGIS và MinIO.
+        \item Truy vết nguyên nhân gốc sự cố production kéo dài nhiều giờ, sửa tận gốc trong mã nguồn, sau đó bổ sung \textbf{startup/readiness probe} và định mức tài nguyên để biến restart gián đoạn thành cập nhật cuốn chiếu không downtime.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
 % --- MobiFone ---
-\begin{twocolentry}{\textit{Tháng 4 2025 -- Hiện tại}}
+\begin{twocolentry}{\textit{Tháng 4 2025 -- Tháng 4 2026}}
     \textbf{Tổng công ty Viễn thông MobiFone} \\[4pt]
     \textit{Chuyên viên Tối ưu hóa Phòng vô tuyến và Kỹ sư Công nghệ thông tin}
 \end{twocolentry}

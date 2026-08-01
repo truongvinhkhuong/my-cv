@@ -1,0 +1,22 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Generated PDFs (built by CI, published to Releases)
+*.pdf
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp

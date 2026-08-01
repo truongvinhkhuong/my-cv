@@ -1,9 +1,10 @@
 \section{Giới thiệu}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Kỹ sư Hệ thống đa ngành \& Lập trình viên Backend}, kết hợp chuyên môn sâu về hạ tầng doanh nghiệp (IDC, Ảo hóa) với kiến trúc phần mềm hiệu năng cao.
-        \item \textbf{Hạ tầng (Infrastructure):} Máy chủ \& Lưu trữ (SAN/NAS, Dell/HPE), Ảo hóa (VMware/Proxmox, K8s), Microsoft Core (AD DS), và Bảo mật Trung tâm Dữ liệu (Firewalls, WAF).
-        \item \textbf{Phần mềm \& DevOps:} Backend (Golang, Python, gRPC, DDD), CI/CD Pipelines, SRE, và Tự động hóa Hạ tầng.
+        \item \textbf{Kỹ sư DevSecOps \& Platform} với \textbf{hơn 4 năm} kinh nghiệm trải rộng từ nền tảng cloud-native, phát triển backend (Golang) đến hạ tầng doanh nghiệp \& viễn thông --- hiện chịu trách nhiệm vận hành nền tảng Kubernetes production phục vụ hệ thống bản sao số (digital twin) và dữ liệu không gian địa lý quy mô quốc gia.
+        \item \textbf{DevSecOps:} đưa bảo mật vào sớm trong CI/CD (SAST, SCA, quét bí mật và ảnh container), xử lý lỗ hổng CVE, gia cố container và thực thi nguyên tắc đặc quyền tối thiểu trên nền tảng.
+        \item \textbf{MLOps \& Dữ liệu:} vận hành hạ tầng tính toán GPU (NVIDIA A100), CI/CD cho các dịch vụ mô hình thị giác máy tính, quản lý thực nghiệm mô hình, cùng các luồng dữ liệu streaming/batch (Kafka, CDC, Airflow, Spark).
+        \item \textbf{Hạ tầng \& SRE:} Kubernetes (RKE2/k3s), IDC on-premise, ảo hóa, giám sát tập trung, phân tích nguyên nhân gốc sự cố và triển khai không gián đoạn dịch vụ.
     \end{highlights}
 \end{onecolentry}
 
@@ -22,22 +23,40 @@
 
 \section{Kinh nghiệm Làm việc}
 
-% --- MobiFone ---
-\begin{twocolentry}{\textit{Tháng 4 2025 -- Hiện tại}}
-    \textbf{Tổng công ty Viễn thông MobiFone} \\[4pt]
-    \textit{Kỹ sư Hệ thống \& Lập trình viên Phần mềm}
+% --- VNPT (Hiện tại) ---
+\begin{twocolentry}{\textit{Tháng 4 2026 -- Hiện tại}}
+    \textbf{Công ty Công nghệ Thông tin VNPT (VNPT-IT)} \\[4pt]
+    \textit{Kỹ sư DevSecOps \& Platform (Kubernetes / MLOps)}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Thiết kế, triển khai và tối ưu hóa hạ tầng CNTT doanh nghiệp tính sẵn sàng cao trên các thiết bị vật lý (máy chủ Dell, HPE) và các giải pháp lưu trữ toàn diện (SAN/NAS hỗ trợ phân tầng lưu trữ).
-        \item Kiến trúc và quản trị các cụm ảo hóa quy mô lớn sử dụng VMware vSphere và Proxmox VE, triển khai các tính năng nâng cao như High Availability (HA), vMotion và Distributed Resource Scheduler (DRS) nhằm đảm bảo uptime 99.99\%.
-        \item Dẫn dắt toàn bộ vòng đời tích hợp cho các dự án hạ tầng phức tạp: tiến hành khảo sát thực địa, soạn thảo tài liệu thiết kế kỹ thuật (HLD/LLD), và trực tiếp chỉ đạo các giai đoạn chạy thử nghiệm (pilot) cùng nghiệm thu (UAT) trước khi bàn giao.
-        \item Quản trị an toàn hệ thống Microsoft Enterprise tập trung, chịu trách nhiệm hoàn toàn về Active Directory Domain Services (AD DS), cụm DNS/DHCP sẵn sàng cao, Network Policy Server (NPS) và cấu hình File Services.
-        \item Thiết kế kiến trúc mạng Core, Distribution và Access mạnh mẽ, kết hợp thiết bị mạng tiêu chuẩn với định tuyến VLAN phức tạp và quy hoạch IP subnetting.
-        \item Đảm bảo an ninh nghiêm ngặt trên toàn hạ tầng viễn thông bằng cách triển khai và tinh chỉnh Next-Generation Firewalls (NGFW), Web Application Firewalls (WAF), Site-to-Site VPNs bảo mật và Layer 7 Load Balancers.
-        \item Thiết kế và vận hành các chiến lược Khôi phục Thảm họa (DR) và bảo vệ dữ liệu liên tục bằng Veeam Backup \& Replication, SRM, và nhân bản đa điểm (multi-site replication) nhằm tuân thủ nghiêm ngặt RPO/RTO.
-        \item Tập trung hóa khả năng quan sát hệ thống thông qua việc tích hợp LibreNMS, Zabbix và Grafana để giám sát hiệu năng theo thời gian thực, tổng hợp syslog và cảnh báo SNMP cho toàn bộ máy chủ và thiết bị mạng.
-        \item Thu hẹp khoảng cách giữa hạ tầng và phần mềm bằng cách duy trì các hệ thống xác thực Smart OTP (Python) và luồng phân tích dữ liệu viễn thông.
+        \item Chịu trách nhiệm chính nền tảng \textbf{Kubernetes (RKE2)} production on-premise --- cụm máy chủ vật lý tổng \textbf{140 vCPU / hơn 400 GB RAM / NVIDIA A100 80GB}, vận hành \textbf{trên 100 pod} thuộc hơn 20 namespace và 70 deployment, tỉ lệ workload khỏe mạnh 99\%.
+        \item Xây dựng và vận hành \textbf{hơn 30 pipeline CI/CD} (Jenkins multibranch, GitLab CI) cho các dịch vụ .NET, Go, Node.js và Python/AI --- build, kiểm thử, quét bảo mật, đẩy lên registry OCI nội bộ và triển khai qua Rancher; chuẩn hóa khuôn pipeline và tự động đồng bộ sang 18 repository bằng GitLab API.
+        \item \textbf{DevSecOps:} tích hợp bảo mật ngay từ đầu vào mọi pipeline --- quét ảnh/mã nguồn bằng \textbf{Trivy}, phát hiện lộ bí mật bằng \textbf{gitleaks}, kiểm soát chất lượng bằng \textbf{SonarQube}; chủ trì rà soát bảo mật trên \textasciitilde30 repository và thúc đẩy xử lý các cảnh báo phụ thuộc mức nghiêm trọng.
+        \item Gia cố nền tảng container: workload chạy không quyền root với \texttt{runAsNonRoot}/\texttt{seccomp}, phân tách mạng bằng NetworkPolicy, quản lý pull secret của registry và loại bỏ thông tin nhạy cảm đã lỡ commit khỏi lịch sử mã nguồn.
+        \item Thực hiện nâng cấp \textbf{.NET 6 $\rightarrow$ .NET 8} không gián đoạn cho hai microservice lõi --- loại bỏ 16 assembly cũ bị che khuất bằng cách chuyển sang \texttt{FrameworkReference}, xử lý 4 cảnh báo bảo mật mức HIGH, và dựng lại image qua thay đổi hệ điều hành nền (virtualenv theo PEP 668, giải quyết thư viện native) kèm kiểm thử trước với cấu hình production thật.
+        \item Truy vết nguyên nhân gốc một sự cố production kéo dài nhiều giờ do biến môi trường roll-forward của .NET đặt ở phạm vi toàn cục; sửa tận gốc trong mã nguồn và sau đó bổ sung \textbf{startup/readiness probe} cùng định mức tài nguyên, biến thao tác restart gây gián đoạn thành cập nhật cuốn chiếu không downtime.
+        \item \textbf{MLOps:} vận hành hạ tầng GPU (A100 80GB) và CI/CD cho các dịch vụ mô hình thị giác máy tính --- nhận dạng vật thể/văn bản, nhận dạng biển số, ẩn danh hình ảnh và sinh bản đồ HD --- cùng \textbf{MLflow} theo dõi thực nghiệm và luồng dữ liệu \textbf{Airflow / Spark / NiFi}.
+        \item \textbf{Dữ liệu \& streaming:} triển khai \textbf{Debezium / Kafka Connect} bắt biến đổi dữ liệu (CDC) trên cơ chế logical replication của PostgreSQL kèm biện pháp chống phình WAL; vận hành Kafka, Redis, Elasticsearch, MongoDB, PostgreSQL/PostGIS và lưu trữ đối tượng \textbf{MinIO}.
+        \item \textbf{Giám sát:} xây dựng hệ thống \textbf{Zabbix + Grafana} tập trung --- template tùy biến, tự động phát hiện thiết bị, tinh chỉnh ngưỡng theo từng host và cảnh báo Telegram phân luồng theo mức độ kèm biểu đồ; loại bỏ nhiễu cảnh báo kinh niên vốn đang che lấp một sự cố phần cứng thật.
+        \item Vận hành tầng biên \textbf{Nginx}: kết thúc TLS qua Cloudflare Tunnel, CORS kèm chứng thực, nâng cấp kết nối WebSocket/SignalR, và phân phối vector tile cho khối lượng công việc không gian 3D và BIM/CityGML.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+% --- MobiFone ---
+\begin{twocolentry}{\textit{Tháng 4 2025 -- Tháng 4 2026}}
+    \textbf{Tổng công ty Viễn thông MobiFone} \\[4pt]
+    \textit{Kỹ sư Tối ưu Vô tuyến (Ericsson/Nokia) \& Kỹ sư Hệ thống}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Chuyên gia tối ưu vô tuyến: độc lập phân tích, đánh giá và tối ưu mạng vô tuyến 4G/5G trên thiết bị Ericsson và Nokia --- cải thiện KPI thông qua tinh chỉnh vùng phủ RF, xử lý rớt cuộc gọi và giảm nghẽn mạng.
+        \item Thiết kế và triển khai hạ tầng CNTT doanh nghiệp tính sẵn sàng cao trên máy chủ vật lý Dell/HPE và lưu trữ SAN/NAS phân tầng; dẫn dắt trọn vòng đời tích hợp từ khảo sát thực địa, soạn tài liệu HLD/LLD, chạy pilot và nghiệm thu UAT đến bàn giao.
+        \item Kiến trúc và quản trị các cụm ảo hóa VMware vSphere và Proxmox VE với High Availability, vMotion và DRS nhằm tối đa hóa thời gian hoạt động của hệ thống.
+        \item Quản trị hệ thống Microsoft Enterprise tập trung --- Active Directory Domain Services, cụm DNS/DHCP sẵn sàng cao, Network Policy Server và File Services --- cùng thiết kế mạng Core/Distribution/Access với định tuyến VLAN và quy hoạch IP subnetting.
+        \item Đảm bảo an ninh hạ tầng viễn thông (NGFW, WAF, Site-to-Site VPN, Layer 7 Load Balancer) và vận hành chiến lược Khôi phục Thảm họa bằng Veeam Backup \& Replication, SRM cùng nhân bản đa điểm để đáp ứng RPO/RTO nghiêm ngặt.
+        \item Tập trung hóa giám sát bằng LibreNMS, Zabbix và Grafana; phát triển microservice backend \textbf{Golang} cho luồng phân tích dữ liệu viễn thông và duy trì hệ thống xác thực Smart OTP (Python).
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -49,16 +68,12 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Xây dựng nền tảng xử lý đơn hàng (Golang, gRPC, DDD) tích hợp Shopee, Lazada, TikTok với cơ chế quản lý phiên bản tồn kho và khóa phân tán (distributed locking).
-        \item Thiết kế và vận hành hạ tầng IDC on-premise (Proxmox VE, Kubernetes, lưu trữ NAS, mạng) với cơ chế failover HA.
-        \item Triển khai chiến lược lưu trữ phân tầng hot/warm/cold trên hệ thống NAS để quản lý vòng đời dữ liệu.
+        \item Xây dựng nền tảng xử lý đơn hàng (Golang, gRPC, DDD) tích hợp Shopee, Lazada, TikTok với quản lý phiên bản tồn kho và khóa phân tán, cung cấp qua API Gateway có tài liệu Swagger/Scalar và Redis caching.
+        \item Thiết kế và vận hành hạ tầng IDC on-premise (Proxmox VE, Kubernetes, lưu trữ NAS, mạng) với failover HA và lưu trữ phân tầng hot/warm/cold quản lý vòng đời dữ liệu.
         \item Cấu hình nhân bản MySQL/PostgreSQL (master-slave, multi-master) để đảm bảo tính sẵn sàng cao.
-        \item Kiến trúc nền tảng bảo mật zero-trust (Cloudflare ZeroTrust, đường hầm bảo mật, WAF, chống DDoS).
-        \item Xây dựng hạ tầng giám sát SRE và các pipeline CI/CD (GitHub Actions, Drone CI, Kubernetes).
-        \item Triển khai các cụm k8s/k3s thông qua Ansible với bộ lưu trữ bền vững Longhorn.
-        \item Thiết lập mạng lưới bảo mật toàn công ty (DrayTek firewalls, Headscale VPN cùng Tailscale/WireGuard).
+        \item Kiến trúc nền tảng bảo mật zero-trust (Cloudflare ZeroTrust, đường hầm bảo mật, WAF, chống DDoS) và mạng lưới bảo mật toàn công ty (DrayTek firewall, Headscale với WireGuard/Tailscale).
+        \item Xây dựng hạ tầng giám sát SRE và pipeline CI/CD (GitHub Actions, Drone CI); triển khai cụm k8s/k3s qua Ansible với lưu trữ bền vững Longhorn.
         \item Triển khai Authentik làm IdP trung tâm (SSO, MFA, RBAC) cho các dịch vụ nội bộ.
-        \item Phát triển hệ thống API bằng Golang với tài liệu Swagger/Scalar, Redis caching và API Gateway.
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -92,17 +107,19 @@
     \end{highlights}
 \end{onecolentry}
 
-\section{Kỹ năng Công nghệ \& Sở thích}
+\section{Kỹ năng Công nghệ}
 \begin{onecolentry}
 \begin{highlights}
-    \item \textbf{Lập trình:} Go, C/C++, Python, JavaScript, Java, Rust
-    \item \textbf{Backend:} gRPC, Domain-Driven Design (DDD), Microservices, API Gateway
-    \item \textbf{Hạ tầng (Infrastructure):} On-Prem IDC, Proxmox VE, Kubernetes (k8s/k3s), Telecom Infrastructure
-    \item \textbf{Cơ sở dữ liệu:} MySQL/PostgreSQL (Replication, Master-Slave), MongoDB, Redis, DuckDB
-    \item \textbf{Bảo mật:} Cloudflare ZeroTrust, Secure Tunnels, DrayTek Firewalls, Zero-Trust Architecture
-    \item \textbf{Mạng (Networking):} VLAN, Load Balancing, Network Segmentation, VPN (Tailscale/WireGuard)
-    \item \textbf{DevOps:} Docker, Ansible, GitHub Actions, Drone CI, Nginx, CI/CD Pipelines
-    \item \textbf{Web:} Next.js, React.js, SpringBoot, Tauri, Electron
+    \item \textbf{DevSecOps:} Trivy, gitleaks, SonarQube (SAST/SCA), xử lý CVE \& phụ thuộc, gia cố container (non-root, seccomp), NetworkPolicy, quản lý bí mật, kiến trúc Zero-Trust
+    \item \textbf{Container \& Điều phối:} Kubernetes (RKE2, k8s/k3s), Rancher, Helm, Docker, containerd, registry OCI nội bộ, rolling update, probe \& định mức tài nguyên
+    \item \textbf{CI/CD:} Jenkins (multibranch), GitLab CI, GitHub Actions, Drone CI, chuẩn hóa khuôn pipeline, quản lý vòng đời artifact/image
+    \item \textbf{MLOps \& Hạ tầng AI:} vận hành GPU NVIDIA (A100, CUDA runtime), MLflow, phục vụ mô hình thị giác máy tính, điều phối GPU, CI/CD cho dịch vụ mô hình
+    \item \textbf{Dữ liệu \& Streaming:} Kafka, Debezium/Kafka Connect (CDC), Apache Airflow, Spark, NiFi, Elasticsearch, MinIO (S3)
+    \item \textbf{Cơ sở dữ liệu:} PostgreSQL/PostGIS (logical replication, tuning), MySQL, MongoDB, Redis, DuckDB
+    \item \textbf{Giám sát \& SRE:} Zabbix, Grafana, LibreNMS, alert engineering, phân tích nguyên nhân gốc sự cố, DR/backup (Veeam, RPO/RTO)
+    \item \textbf{Hạ tầng \& Mạng:} IDC on-premise, Proxmox VE, VMware vSphere (HA/vMotion/DRS), Linux, Ansible, SAN/NAS phân tầng, Nginx (reverse proxy, WebSocket, TLS), Cloudflare Tunnel/ZeroTrust, VLAN, cân bằng tải, VPN (WireGuard/Tailscale), NGFW/WAF
+    \item \textbf{Lập trình:} Go, Python, C/C++, Java, Rust, JavaScript/TypeScript, Bash; gRPC, DDD, Microservices
+    \item \textbf{Lĩnh vực:} Không gian địa lý \& 3D (PostGIS, vector tiles, 3DCityDB/CityGML, BIM/AEC); Viễn thông \& RF (tối ưu vô tuyến Ericsson \& Nokia, phân tích hiệu năng RF, KPI mạng)
 \end{highlights}
 \end{onecolentry}
 

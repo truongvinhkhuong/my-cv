@@ -22,8 +22,25 @@
 
 \section{Experience}
 
-% --- MobiFone (Current) ---
-\begin{twocolentry}{\textit{Apr 2025 -- Present}}
+% --- VNPT (Current) ---
+\begin{twocolentry}{\textit{Apr 2026 -- Present}}
+    \textbf{VNPT Information Technology (VNPT-IT)} \\[4pt]
+    \textit{DevSecOps \& Platform Engineer (Kubernetes / MLOps)}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Kubernetes Platform Ownership:} Operate a production on-premises \textbf{RKE2} estate --- \textbf{140 vCPU / 400+ GB RAM / NVIDIA A100 80GB} across bare-metal nodes, running \textbf{100+ pods} over 20+ namespaces and 70+ deployments at 99\% workload health
+        \item \textbf{CI/CD at Scale:} Built and operate \textbf{30+ pipelines} (Jenkins multibranch, GitLab CI) across .NET, Go, Node.js and Python/AI services --- build, test, scan, publish to a private OCI registry, deploy via Rancher; standardised the pipeline template and rolled it to 18 repositories through GitLab API automation
+        \item \textbf{DevSecOps:} Embedded shift-left security into every pipeline --- \textbf{Trivy} image/filesystem scanning, \textbf{gitleaks} secret detection, \textbf{SonarQube} quality gates; hardened workloads with \texttt{runAsNonRoot}/\texttt{seccomp} and NetworkPolicy segmentation
+        \item \textbf{Data \& Streaming:} Deployed \textbf{Debezium / Kafka Connect} change-data-capture on PostgreSQL logical replication with WAL-retention safeguards; operate Kafka, Redis, Elasticsearch, MongoDB and \textbf{MinIO} object storage
+        \item \textbf{MLOps:} Operate GPU compute (A100 80GB) and CI/CD for computer-vision model services, with \textbf{MLflow} experiment tracking and \textbf{Airflow / Spark / NiFi} data pipelines
+        \item \textbf{Release Engineering \& SRE:} Root-caused a multi-hour production outage to a global .NET roll-forward override, fixed it at source, then introduced \textbf{startup/readiness probes} and resource governance --- converting disruptive restarts into zero-downtime rolling updates
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+% --- MobiFone ---
+\begin{twocolentry}{\textit{Apr 2025 -- Apr 2026}}
     \textbf{MobiFone Telecommunications Corporation} \\[4pt]
     \textit{Backend Developer \& SRE Engineer}
 \end{twocolentry}

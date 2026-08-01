@@ -23,8 +23,25 @@
 
 \section{Experience}
 
-% --- MobiFone (Current) ---
-\begin{twocolentry}{\textit{Apr 2025 -- Present}}
+% --- VNPT (Current) ---
+\begin{twocolentry}{\textit{Apr 2026 -- Present}}
+    \textbf{VNPT Information Technology (VNPT-IT)} \\[4pt]
+    \textit{DevSecOps \& Platform Engineer (.NET / Kubernetes)}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{.NET 6 $\rightarrow$ .NET 8 Migration:} Delivered a zero-downtime upgrade of two core \textbf{ASP.NET Core} microservices --- eliminated 16 shadowed legacy assemblies by moving from stale NuGet packages to \texttt{FrameworkReference}, cleared 4 HIGH-severity advisories, and rebuilt container images across a base-OS change with pre-flight validation against production configuration
+        \item \textbf{Real-Time Web:} Enabled \textbf{SignalR / WebSocket} delivery end-to-end --- three production hubs for 3D conversion progress, document notifications and AI prediction results --- including the Nginx edge upgrade path, credentialed CORS and long-lived connection tuning
+        \item \textbf{CI/CD:} Built and operate \textbf{30+ pipelines} (Jenkins multibranch, GitLab CI) across .NET, Go, Node.js and Python/AI services --- build, test, scan, publish to a private OCI registry and deploy via Rancher
+        \item \textbf{DevSecOps:} Embedded \textbf{Trivy}, \textbf{gitleaks} and \textbf{SonarQube} scanning into every pipeline; hardened containers to non-root with \texttt{seccomp} profiles and NetworkPolicy segmentation
+        \item \textbf{Platform Operations:} Run a production on-premises \textbf{Kubernetes (RKE2)} estate --- 140 vCPU / 400+ GB RAM / NVIDIA A100 80GB --- serving 100+ pods; root-caused a multi-hour production outage and introduced probes and resource governance for zero-downtime releases
+        \item \textbf{Backend \& Data:} PostgreSQL/PostGIS tuning and logical replication, \textbf{Debezium} change-data-capture, Kafka, Redis, Elasticsearch and MinIO object storage
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+% --- MobiFone ---
+\begin{twocolentry}{\textit{Apr 2025 -- Apr 2026}}
     \textbf{MobiFone Telecommunications Corporation} \\[4pt]
     \textit{Backend Developer \& SRE Engineer}
 \end{twocolentry}

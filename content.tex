@@ -1,9 +1,10 @@
 \section{Introduction}
 \begin{onecolentry}
     \begin{highlights}
-        \item Multi-disciplinary System Engineer \& Developer with \textbf{3+ years of Golang backend experience}, combining deep expertise in enterprise infrastructure and high-performance software architectures
-        \item Telecom \& Infrastructure: Radio Network Optimization (Ericsson, Nokia), Core Networking, Virtualization (VMware/Proxmox, K8s), and Systems Administration
-        \item Software \& DevOps: Advanced Backend Development (Golang, Python, gRPC, DDD), CI/CD Pipelines, SRE, and Infrastructure Automation
+        \item \textbf{DevSecOps \& Platform Engineer} with \textbf{4+ years} across cloud-native platform engineering, backend development (Golang), and enterprise/telecom infrastructure --- currently owning production Kubernetes platforms serving a national-scale digital-twin and geospatial system
+        \item \textbf{DevSecOps:} shift-left security in CI/CD (SAST, SCA, secret and container image scanning), CVE remediation, container hardening, and least-privilege platform policy
+        \item \textbf{MLOps \& Data:} GPU compute operations (NVIDIA A100), CI/CD for computer-vision model services, experiment tracking, and streaming/batch data pipelines (Kafka, CDC, Airflow, Spark)
+        \item \textbf{Infrastructure \& SRE:} Kubernetes (RKE2/k3s), on-prem IDC, virtualization, observability, incident root-cause analysis, and zero-downtime release engineering
     \end{highlights}
 \end{onecolentry}
 
@@ -24,24 +25,40 @@
 
 \section{Experience}
 
-% --- MobiFone (Current) ---
-\begin{twocolentry}{\textit{Apr 2025 -- Present}}
+% --- VNPT (Current) ---
+\begin{twocolentry}{\textit{Apr 2026 -- Present}}
+    \textbf{VNPT Information Technology (VNPT-IT)} \\[4pt]
+    \textit{DevSecOps \& Platform Engineer (Kubernetes / MLOps)}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Platform owner for a production on-premises \textbf{Kubernetes (RKE2)} estate --- bare-metal nodes totalling \textbf{140 vCPU / 400+ GB RAM / NVIDIA A100 80GB}, running \textbf{100+ pods} across 20+ namespaces and 70+ deployments at 99\% workload health
+        \item Built and operate \textbf{30+ CI/CD pipelines} (Jenkins multibranch, GitLab CI) spanning .NET, Go, Node.js and Python/AI services --- build, test, scan, publish to a private OCI registry, and deploy via Rancher; standardised the pipeline template and rolled it to 18 repositories through GitLab API automation
+        \item \textbf{DevSecOps:} embedded shift-left security into every pipeline --- \textbf{Trivy} image/filesystem scanning, \textbf{gitleaks} secret detection and \textbf{SonarQube} quality gates; led a security audit across \textasciitilde30 repositories and drove remediation of critical dependency advisories
+        \item Hardened the container platform: non-root workloads with enforced \texttt{runAsNonRoot}/\texttt{seccomp} profiles, NetworkPolicy segmentation, registry pull secrets, and removal of committed credentials from source history
+        \item Delivered a zero-downtime \textbf{.NET 6 $\rightarrow$ .NET 8} migration of two core microservices --- eliminated 16 shadowed legacy assemblies by moving to \texttt{FrameworkReference}, cleared 4 HIGH-severity advisories, and rebuilt images across a base-OS change (PEP 668 virtualenv, native library resolution) with pre-flight validation against production configuration
+        \item Root-caused a multi-hour production outage to a global .NET roll-forward override; fixed at source and hardened the platform afterwards with \textbf{startup/readiness probes} and resource governance, converting disruptive restarts into zero-downtime rolling updates
+        \item \textbf{MLOps:} operate GPU compute (A100 80GB) and CI/CD for computer-vision model services --- object/text detection, licence-plate recognition, image anonymisation and HD-map generation --- alongside \textbf{MLflow} experiment tracking and \textbf{Airflow / Spark / NiFi} data pipelines
+        \item \textbf{Data \& streaming:} deployed \textbf{Debezium / Kafka Connect} change-data-capture on PostgreSQL logical replication with WAL-retention safeguards; operate Kafka, Redis, Elasticsearch, MongoDB, PostgreSQL/PostGIS and \textbf{MinIO} object storage
+        \item \textbf{Observability:} built centralised \textbf{Zabbix + Grafana} monitoring --- custom templates, low-level discovery, per-host threshold tuning and severity-based Telegram escalation with rendered graphs; removed chronic alert noise that had been masking genuine hardware failure
+        \item Operate the \textbf{Nginx} edge tier: TLS termination via Cloudflare Tunnel, credentialed CORS, WebSocket/SignalR upgrade paths, and vector-tile delivery for 3D geospatial and BIM/CityGML workloads
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+% --- MobiFone ---
+\begin{twocolentry}{\textit{Apr 2025 -- Apr 2026}}
     \textbf{MobiFone Telecommunications Corporation} \\[4pt]
     \textit{RAN Optimization Engineer (Ericsson/Nokia) \& System Engineer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Acted as a RAN Optimization Specialist, independently analyzing, auditing, and optimizing 4G/5G radio networks utilizing Ericsson and Nokia network equipment
-        \item Extracted and analyzed comprehensive network performance data to significantly improve KPIs, optimizing RF coverage, resolving drop call rates, and mitigating network congestion
-        \item Architected, deployed, and optimized high-availability enterprise IT infrastructure across physical endpoints (Dell, HPE servers) and comprehensive storage solutions (SAN/NAS with tiering capabilities)
-        \item Engineered and managed scalable virtualization clusters using VMware vSphere and Proxmox VE, implementing advanced features like High Availability (HA), vMotion, and Distributed Resource Scheduler (DRS) to ensure maximum system availability
-        \item Led complete integration lifecycles for complex infrastructure projects: conducting detailed site surveys, authoring technical design documents (HLD/LLD), and successfully leading pilot and User Acceptance Testing (UAT) phases before final handover
-        \item Administered a secure, centralized Microsoft Enterprise Infrastructure, taking full ownership of Active Directory Domain Services (AD DS), highly available DNS/DHCP clusters, Network Policy Server (NPS), and File Services configuration
-        \item Designed robust Core, Distribution, and Access networking architectures utilizing industry-standard network equipment coupled with complex VLAN routing and IP subnetting schemes
-        \item Enforced stringent security postures across telecom-grade infrastructure by deploying and tuning Next-Generation Firewalls (NGFW), Web Application Firewalls (WAF), secure Site-to-Site VPNs, and Layer 7 Load Balancers
-        \item Designed and governed Disaster Recovery (DR) and continuous data protection strategies using Veeam Backup \& Replication, SRM, and multi-site replication to guarantee strict RPO/RTO compliance
-        \item Centralized system observability by integrating LibreNMS, Zabbix, and Grafana for real-time performance monitoring, syslog aggregation, and SNMP-based alerting across all server and network hardware
-        \item Engineered core backend microservices in \textbf{Golang} for telecom data analytics pipelines, and maintained Python-based Smart OTP authentication systems
+        \item RAN Optimization Specialist: independently analysed, audited and optimised 4G/5G radio networks on Ericsson and Nokia equipment --- improving KPIs through RF coverage tuning, drop-call resolution and congestion mitigation
+        \item Architected and deployed high-availability enterprise IT infrastructure across Dell/HPE physical servers and tiered SAN/NAS storage, leading full integration lifecycles from site survey and HLD/LLD design through pilot and UAT to handover
+        \item Engineered scalable virtualization clusters on VMware vSphere and Proxmox VE with High Availability, vMotion and DRS to maximise system availability
+        \item Administered centralised Microsoft enterprise infrastructure --- Active Directory Domain Services, highly available DNS/DHCP, Network Policy Server and File Services --- alongside Core/Distribution/Access network design with VLAN routing and IP subnetting
+        \item Enforced telecom-grade security posture (NGFW, WAF, site-to-site VPN, Layer 7 load balancing) and governed Disaster Recovery using Veeam Backup \& Replication, SRM and multi-site replication to meet strict RPO/RTO targets
+        \item Centralised observability with LibreNMS, Zabbix and Grafana; engineered \textbf{Golang} backend microservices for telecom data analytics pipelines and maintained Python-based Smart OTP authentication
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -53,16 +70,12 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built order processing platform (Golang, gRPC, DDD) integrating Shopee, Lazada, TikTok with inventory versioning and distributed locking
-        \item Designed and operated on-prem IDC infrastructure (Proxmox VE, Kubernetes, NAS storage, networking) with HA failover
-        \item Implemented hot/warm/cold storage tiering strategy with NAS systems for data lifecycle management
+        \item Built an order-processing platform (Golang, gRPC, DDD) integrating Shopee, Lazada and TikTok with inventory versioning and distributed locking, exposed through a documented API gateway with Redis caching
+        \item Designed and operated on-prem IDC infrastructure (Proxmox VE, Kubernetes, NAS storage, networking) with HA failover and hot/warm/cold storage tiering for data lifecycle management
         \item Configured MySQL/PostgreSQL replication (master-slave, multi-master) for high availability
-        \item Architected zero-trust security platform (Cloudflare ZeroTrust, secure tunnels, WAF, DDoS protection)
-        \item Built SRE monitoring infrastructure and CI/CD pipelines (GitHub Actions, Drone CI, Kubernetes)
-        \item Deployed k8s/k3s clusters via Ansible with Longhorn persistent storage
-        \item Set up company-wide secure network (DrayTek firewalls, Headscale VPN with Tailscale/WireGuard)
-        \item Implemented Authentik as centralized IdP (SSO, MFA, RBAC) for internal services
-        \item Developed Golang API system with Swagger/Scalar docs, Redis caching, and API gateway
+        \item Architected a zero-trust security platform (Cloudflare ZeroTrust, secure tunnels, WAF, DDoS protection) and a company-wide secure network (DrayTek firewalls, Headscale with WireGuard/Tailscale)
+        \item Built SRE monitoring and CI/CD pipelines (GitHub Actions, Drone CI); deployed k8s/k3s clusters via Ansible with Longhorn persistent storage
+        \item Implemented Authentik as the centralised identity provider (SSO, MFA, RBAC) for internal services
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -100,15 +113,16 @@
 \section{Technical Skills \& Interests}
 \begin{onecolentry}
 \begin{highlights}
-    \item \textbf{Telecom \& RF:} Radio Network Optimization (Ericsson \& Nokia), RAN Architecture, RF Performance Analysis, Network KPIs, Telecom Analytics
-    \item \textbf{Programming:} Go, C/C++, Python, JavaScript, Java, Rust
-    \item \textbf{Backend:} gRPC, Domain-Driven Design (DDD), Microservices, API Gateway
-    \item \textbf{Infrastructure:} On-Prem IDC, Proxmox VE, Kubernetes (k8s/k3s), Telecom Infrastructure
-    \item \textbf{Database:} MySQL/PostgreSQL (Replication, Master-Slave), MongoDB, Redis, DuckDB
-    \item \textbf{Security:} Cloudflare ZeroTrust, Secure Tunnels, DrayTek Firewalls, Zero-Trust Architecture
-    \item \textbf{Networking:} VLAN, Load Balancing, Network Segmentation, VPN (Tailscale/WireGuard)
-    \item \textbf{DevOps:} Docker, Ansible, GitHub Actions, Drone CI, Nginx, CI/CD Pipelines
-    \item \textbf{Web:} Next.js, React.js, SpringBoot, Tauri, Electron
+    \item \textbf{DevSecOps:} Trivy, gitleaks, SonarQube (SAST/SCA), CVE \& dependency remediation, container hardening (non-root, seccomp), NetworkPolicy, secret management, Zero-Trust Architecture
+    \item \textbf{Containers \& Orchestration:} Kubernetes (RKE2, k8s/k3s), Rancher, Helm, Docker, containerd, private OCI registry, rolling updates, probes \& resource governance
+    \item \textbf{CI/CD:} Jenkins (multibranch), GitLab CI, GitHub Actions, Drone CI, pipeline templating, artifact/image promotion
+    \item \textbf{MLOps \& AI Infra:} NVIDIA GPU operations (A100, CUDA runtime), MLflow, computer-vision model serving, GPU scheduling, model-service CI/CD
+    \item \textbf{Data \& Streaming:} Kafka, Debezium/Kafka Connect (CDC), Apache Airflow, Spark, NiFi, Elasticsearch, MinIO (S3)
+    \item \textbf{Databases:} PostgreSQL/PostGIS (logical replication, tuning), MySQL, MongoDB, Redis, DuckDB
+    \item \textbf{Observability \& SRE:} Zabbix, Grafana, LibreNMS, Prometheus-style metrics, alert engineering, incident root-cause analysis, DR/backup (Veeam, RPO/RTO)
+    \item \textbf{Infrastructure \& Networking:} On-Prem IDC, Proxmox VE, VMware vSphere (HA/vMotion/DRS), Linux, Ansible, SAN/NAS tiering, Nginx (reverse proxy, WebSocket, TLS), Cloudflare Tunnel/ZeroTrust, VLAN, Load Balancing, VPN (WireGuard/Tailscale), NGFW/WAF
+    \item \textbf{Programming:} Go, Python, C/C++, Java, Rust, JavaScript/TypeScript, Bash; gRPC, DDD, Microservices
+    \item \textbf{Domain:} Geospatial \& 3D (PostGIS, vector tiles, 3DCityDB/CityGML, BIM/AEC); Telecom \& RF (RAN Optimization on Ericsson \& Nokia, RF performance analysis, network KPIs)
 \end{highlights}
 \end{onecolentry}
 

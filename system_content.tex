@@ -22,8 +22,25 @@
 
 \section{Experience}
 
-% --- MobiFone (Current) ---
-\begin{twocolentry}{\textit{Apr 2025 -- Present}}
+% --- VNPT (Current) ---
+\begin{twocolentry}{\textit{Apr 2026 -- Present}}
+    \textbf{VNPT Information Technology (VNPT-IT)} \\[4pt]
+    \textit{DevSecOps \& Platform Engineer (Kubernetes / MLOps)}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Container Platform}: Platform owner for a production on-premises \textbf{Kubernetes (RKE2)} estate --- \textbf{140 vCPU / 400+ GB RAM / NVIDIA A100 80GB} across bare-metal nodes, serving \textbf{100+ pods} over 20+ namespaces at 99\% workload health
+        \item \textbf{Platform Security}: Embedded \textbf{Trivy}, \textbf{gitleaks} and \textbf{SonarQube} scanning into CI/CD; hardened workloads with non-root execution, \texttt{seccomp} profiles and NetworkPolicy segmentation; led a security audit across \textasciitilde30 repositories
+        \item \textbf{Observability}: Built centralised \textbf{Zabbix + Grafana} monitoring --- custom templates, low-level discovery, per-host threshold tuning and severity-based Telegram escalation with rendered graphs; removed chronic alert noise that had been masking genuine hardware failure
+        \item \textbf{Edge \& Networking}: Operate the \textbf{Nginx} edge tier --- TLS termination via Cloudflare Tunnel, credentialed CORS, WebSocket upgrade paths and vector-tile delivery for 3D geospatial workloads
+        \item \textbf{Data Infrastructure}: Deployed \textbf{Debezium / Kafka Connect} CDC on PostgreSQL logical replication with WAL-retention safeguards; operate Kafka, Redis, Elasticsearch, MongoDB, PostgreSQL/PostGIS and \textbf{MinIO} object storage
+        \item \textbf{Incident Response}: Root-caused a multi-hour production outage to a global runtime roll-forward override, fixed at source, then introduced startup/readiness probes and resource governance for zero-downtime rolling updates
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+% --- MobiFone ---
+\begin{twocolentry}{\textit{Apr 2025 -- Apr 2026}}
     \textbf{MobiFone Telecommunications Corporation} \\[4pt]
     \textit{System \& Network Engineer}
 \end{twocolentry}
