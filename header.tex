@@ -5,26 +5,38 @@
 \newsavebox\ANDbox
 \sbox\ANDbox{}
 
-% \placelastupdatedtext
-% UPDATED HEADER CONTENT (Restored to mostly contact info)
-\begin{header}
-    \textbf{\fontsize{24 pt}{24 pt}\selectfont PHẠM HUY THANH}
-    \vspace{0.3cm} % Original vspace after name
+% Name is provided by the including file (main.tex / main_vi.tex / cover letters)
+% so the English and Vietnamese builds can share this contact block.
+\providecommand{\cvname}{VINH-KHUONG TRUONG}
 
-    \normalsize
-    \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}497 Hòa Hảo, phường Diên Hồng, Tp HCM}%
-    \\[0.15cm]
-    % Contact info on one line as per original template structure
-    \mbox{{\color{black}\footnotesize\faPhone*}\hspace*{0.13cm}+84-916780880}%
-    \kern 0.25cm \AND \kern 0.25cm
-    \mbox{{\color{black}\footnotesize\faComment*}\hspace*{0.13cm}Zalo: 0363367489}%
-    \kern 0.25cm \AND \kern 0.25cm
-    \mbox{{\color{black}\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}\hrefWithoutArrow{mailto:phthanh.dev@gmail.com}{phthanh.dev@gmail.com}}%
-    \kern 0.25cm \AND \kern 0.25cm
-    \mbox{{\color{black}\footnotesize\faGithub}\hspace*{0.13cm}\hrefWithoutArrow{https://github.com/HThanh-how}{github.com/HThanh-how}}%
-    \kern 0.25cm \AND \kern 0.25cm
-    \mbox{{\color{black}\footnotesize\faLinkedinIn}\hspace*{0.13cm}\hrefWithoutArrow{https://linkedin.com/in/phthanhdev}{linkedin.com/in/phthanhdev}}%
-\end{header}
+% Contact block, reused with and without the profile photo
+\newcommand{\headercontent}{%
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont \cvname}
+        \vspace{0.3cm}
+
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faPhone*}\hspace*{0.13cm}0867084729}%
+        \kern 0.25cm \AND \kern 0.25cm
+        \mbox{{\color{black}\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}\hrefWithoutArrow{mailto:trvinhkhuong@gmail.com}{trvinhkhuong@gmail.com}}%
+        \kern 0.25cm \AND \kern 0.25cm
+        \mbox{{\color{black}\footnotesize\faGithub}\hspace*{0.13cm}\hrefWithoutArrow{https://github.com/truongvinhkhuong}{github.com/truongvinhkhuong}}%
+    \end{header}
+}
+
+% Drop an `image.jpg` into the repository root to show a profile photo.
+% Without it the header simply renders full width.
+\IfFileExists{image.jpg}{%
+    \noindent
+    \begin{minipage}[c]{0.78\textwidth}
+        \headercontent
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.2\textwidth}
+        \raggedleft
+        \includegraphics[width=2.5cm,height=3.5cm,keepaspectratio]{image.jpg}
+    \end{minipage}
+}{%
+    \headercontent
+}
 
 \vspace{0.3 cm}
-

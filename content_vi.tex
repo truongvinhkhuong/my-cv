@@ -1,130 +1,117 @@
 \section{Giới thiệu}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Kỹ sư DevSecOps \& Platform} với \textbf{hơn 4 năm} kinh nghiệm trải rộng từ nền tảng cloud-native, phát triển backend (Golang) đến hạ tầng doanh nghiệp \& viễn thông --- hiện chịu trách nhiệm vận hành nền tảng Kubernetes production phục vụ hệ thống bản sao số (digital twin) và dữ liệu không gian địa lý quy mô quốc gia.
-        \item \textbf{DevSecOps:} đưa bảo mật vào sớm trong CI/CD (SAST, SCA, quét bí mật và ảnh container), xử lý lỗ hổng CVE, gia cố container và thực thi nguyên tắc đặc quyền tối thiểu trên nền tảng.
-        \item \textbf{MLOps \& Dữ liệu:} vận hành hạ tầng tính toán GPU (NVIDIA A100), CI/CD cho các dịch vụ mô hình thị giác máy tính, quản lý thực nghiệm mô hình, cùng các luồng dữ liệu streaming/batch (Kafka, CDC, Airflow, Spark).
-        \item \textbf{Hạ tầng \& SRE:} Kubernetes (RKE2/k3s), IDC on-premise, ảo hóa, giám sát tập trung, phân tích nguyên nhân gốc sự cố và triển khai không gián đoạn dịch vụ.
+        \item \textbf{Software Developer} với gần \textbf{2 năm} kinh nghiệm phát triển sản phẩm full-stack end-to-end --- từ thiết kế hệ thống, kiến trúc API đến triển khai và vận hành production
+        \item Kinh nghiệm trải rộng từ \textbf{migration ERP doanh nghiệp}, \textbf{hệ thống chatbot RAG}, đến vai trò \textbf{Founding Engineer} xây dựng nền tảng SaaS ứng dụng AI từ con số không
+        \item Quan tâm sâu tới SaaS, eCommerce và việc ứng dụng AI vào các quy trình nghiệp vụ thực tế
     \end{highlights}
 \end{onecolentry}
+
 
 \section{Học vấn}
-\begin{twocolentry}{\textit{2019 -- 2023}}
-    \textbf{Trường Đại học Bách Khoa TP.HCM - Đại học Quốc gia TP.HCM (VNU-HCM)}\\[4pt]
-    \textit{Chuyên ngành Khoa học Máy tính}
+\begin{twocolentry}{\textit{2022 -- 2026}}
+    \textbf{Trường Đại học Tôn Đức Thắng}\\[4pt]
+    \textit{Cử nhân Kỹ thuật Phần mềm} --- Dự kiến tốt nghiệp 2026
 \end{twocolentry}
 
-\section{Ngoại ngữ}
-\begin{onecolentry}
-    \begin{highlights}
-        \item Tiếng Anh, IELTS: 6.0
-    \end{highlights}
-\end{onecolentry}
 
 \section{Kinh nghiệm Làm việc}
 
-% --- VNPT (Hiện tại) ---
-\begin{twocolentry}{\textit{Tháng 4 2026 -- Hiện tại}}
-    \textbf{Công ty Công nghệ Thông tin VNPT (VNPT-IT)} \\[4pt]
-    \textit{Kỹ sư DevSecOps \& Platform (Kubernetes / MLOps)}
+% --- Truong Dinh Holdings (Hiện tại) ---
+\begin{twocolentry}{\textit{10/2025 -- Hiện tại}}
+    \textbf{Công ty TNHH Truong Dinh Holdings} \\[4pt]
+    \textit{Software Developer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Chịu trách nhiệm chính nền tảng \textbf{Kubernetes (RKE2)} production on-premise --- cụm máy chủ vật lý tổng \textbf{140 vCPU / hơn 400 GB RAM / NVIDIA A100 80GB}, vận hành \textbf{trên 100 pod} thuộc hơn 20 namespace và 70 deployment, tỉ lệ workload khỏe mạnh 99\%.
-        \item Xây dựng và vận hành \textbf{hơn 30 pipeline CI/CD} (Jenkins multibranch, GitLab CI) cho các dịch vụ .NET, Go, Node.js và Python/AI --- build, kiểm thử, quét bảo mật, đẩy lên registry OCI nội bộ và triển khai qua Rancher; chuẩn hóa khuôn pipeline và tự động đồng bộ sang 18 repository bằng GitLab API.
-        \item \textbf{DevSecOps:} tích hợp bảo mật ngay từ đầu vào mọi pipeline --- quét ảnh/mã nguồn bằng \textbf{Trivy}, phát hiện lộ bí mật bằng \textbf{gitleaks}, kiểm soát chất lượng bằng \textbf{SonarQube}; chủ trì rà soát bảo mật trên \textasciitilde30 repository và thúc đẩy xử lý các cảnh báo phụ thuộc mức nghiêm trọng.
-        \item Gia cố nền tảng container: workload chạy không quyền root với \texttt{runAsNonRoot}/\texttt{seccomp}, phân tách mạng bằng NetworkPolicy, quản lý pull secret của registry và loại bỏ thông tin nhạy cảm đã lỡ commit khỏi lịch sử mã nguồn.
-        \item Thực hiện nâng cấp \textbf{.NET 6 $\rightarrow$ .NET 8} không gián đoạn cho hai microservice lõi --- loại bỏ 16 assembly cũ bị che khuất bằng cách chuyển sang \texttt{FrameworkReference}, xử lý 4 cảnh báo bảo mật mức HIGH, và dựng lại image qua thay đổi hệ điều hành nền (virtualenv theo PEP 668, giải quyết thư viện native) kèm kiểm thử trước với cấu hình production thật.
-        \item Truy vết nguyên nhân gốc một sự cố production kéo dài nhiều giờ do biến môi trường roll-forward của .NET đặt ở phạm vi toàn cục; sửa tận gốc trong mã nguồn và sau đó bổ sung \textbf{startup/readiness probe} cùng định mức tài nguyên, biến thao tác restart gây gián đoạn thành cập nhật cuốn chiếu không downtime.
-        \item \textbf{MLOps:} vận hành hạ tầng GPU (A100 80GB) và CI/CD cho các dịch vụ mô hình thị giác máy tính --- nhận dạng vật thể/văn bản, nhận dạng biển số, ẩn danh hình ảnh và sinh bản đồ HD --- cùng \textbf{MLflow} theo dõi thực nghiệm và luồng dữ liệu \textbf{Airflow / Spark / NiFi}.
-        \item \textbf{Dữ liệu \& streaming:} triển khai \textbf{Debezium / Kafka Connect} bắt biến đổi dữ liệu (CDC) trên cơ chế logical replication của PostgreSQL kèm biện pháp chống phình WAL; vận hành Kafka, Redis, Elasticsearch, MongoDB, PostgreSQL/PostGIS và lưu trữ đối tượng \textbf{MinIO}.
-        \item \textbf{Giám sát:} xây dựng hệ thống \textbf{Zabbix + Grafana} tập trung --- template tùy biến, tự động phát hiện thiết bị, tinh chỉnh ngưỡng theo từng host và cảnh báo Telegram phân luồng theo mức độ kèm biểu đồ; loại bỏ nhiễu cảnh báo kinh niên vốn đang che lấp một sự cố phần cứng thật.
-        \item Vận hành tầng biên \textbf{Nginx}: kết thúc TLS qua Cloudflare Tunnel, CORS kèm chứng thực, nâng cấp kết nối WebSocket/SignalR, và phân phối vector tile cho khối lượng công việc không gian 3D và BIM/CityGML.
+        \item \textbf{Công nghệ:} Odoo Community, Node.js, NestJS, Next.js, TypeScript, Payload CMS, FastAPI, PostgreSQL, Redis, BullMQ, Qdrant, LlamaIndex, Jest, Cypress, SonarQube, Docker, Nginx
+        \item Tham gia migration theo từng giai đoạn từ hệ thống \textbf{ERP Bravo} cũ sang \textbf{Odoo Community}, bao gồm các luồng nghiệp vụ kho, dữ liệu khách hàng và báo cáo tài chính
+        \item Thiết kế schema cơ sở dữ liệu và RESTful API cho các module nội bộ của doanh nghiệp, đảm bảo backend dễ bảo trì và sẵn sàng tích hợp
+        \item Xây dựng và triển khai \textbf{toanthang.vn} --- website\slash nền tảng doanh nghiệp song ngữ dùng Next.js, Node.js\slash NestJS, PostgreSQL, Redis, Docker và Nginx, tích hợp Payload CMS để quản trị nội dung cho các trang giới thiệu và thông tin doanh nghiệp
+        \item Phát triển \textbf{chatbot RAG} cho toanthang.vn bằng FastAPI, LlamaIndex, Qdrant, Redis trên nguồn tài liệu công ty để hỗ trợ tra cứu thông tin khách hàng và tự động hoá hỏi đáp; xây dựng pipeline xử lý nền với BullMQ và Redis cho việc xử lý tài liệu, đánh chỉ mục chatbot và tự động hoá quy trình
+        \item Cấu hình triển khai và giám sát với Docker, Nginx, \textbf{Prometheus} và \textbf{Loki} để vận hành production ổn định
+        \item Viết unit test với \textbf{Jest} và end-to-end test với \textbf{Cypress} cho các luồng nghiệp vụ quan trọng, tích hợp \textbf{SonarQube} vào quy trình phát triển để kiểm soát chất lượng mã nguồn backend
+        \item Nghiên cứu và chia sẻ các công nghệ, giải pháp tự động hoá phù hợp phục vụ định hướng chuyển đổi số
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
-% --- MobiFone ---
-\begin{twocolentry}{\textit{Tháng 4 2025 -- Tháng 4 2026}}
-    \textbf{Tổng công ty Viễn thông MobiFone} \\[4pt]
-    \textit{Kỹ sư Tối ưu Vô tuyến (Ericsson/Nokia) \& Kỹ sư Hệ thống}
+% --- UMIC ---
+\begin{twocolentry}{\textit{11/2025 -- 06/2026}}
+    \textbf{UMIC (umic.ai)} --- Nền tảng SaaS Digital Marketing ứng dụng AI \\[4pt]
+    \textit{Founding Engineer (Bán thời gian)}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Chuyên gia tối ưu vô tuyến: độc lập phân tích, đánh giá và tối ưu mạng vô tuyến 4G/5G trên thiết bị Ericsson và Nokia --- cải thiện KPI thông qua tinh chỉnh vùng phủ RF, xử lý rớt cuộc gọi và giảm nghẽn mạng.
-        \item Thiết kế và triển khai hạ tầng CNTT doanh nghiệp tính sẵn sàng cao trên máy chủ vật lý Dell/HPE và lưu trữ SAN/NAS phân tầng; dẫn dắt trọn vòng đời tích hợp từ khảo sát thực địa, soạn tài liệu HLD/LLD, chạy pilot và nghiệm thu UAT đến bàn giao.
-        \item Kiến trúc và quản trị các cụm ảo hóa VMware vSphere và Proxmox VE với High Availability, vMotion và DRS nhằm tối đa hóa thời gian hoạt động của hệ thống.
-        \item Quản trị hệ thống Microsoft Enterprise tập trung --- Active Directory Domain Services, cụm DNS/DHCP sẵn sàng cao, Network Policy Server và File Services --- cùng thiết kế mạng Core/Distribution/Access với định tuyến VLAN và quy hoạch IP subnetting.
-        \item Đảm bảo an ninh hạ tầng viễn thông (NGFW, WAF, Site-to-Site VPN, Layer 7 Load Balancer) và vận hành chiến lược Khôi phục Thảm họa bằng Veeam Backup \& Replication, SRM cùng nhân bản đa điểm để đáp ứng RPO/RTO nghiêm ngặt.
-        \item Tập trung hóa giám sát bằng LibreNMS, Zabbix và Grafana; phát triển microservice backend \textbf{Golang} cho luồng phân tích dữ liệu viễn thông và duy trì hệ thống xác thực Smart OTP (Python).
+        \item \textbf{Công nghệ:} React, TypeScript, Node.js/NestJS, Prisma, PostgreSQL, Redis, Docker, LangChain.js, LangGraph
+        \item Thiết kế kiến trúc và phát triển nền tảng \textbf{SaaS multi-tenant} hoàn chỉnh từ đầu, ứng dụng AI để tự động hoá và tối ưu quy trình digital marketing cho doanh nghiệp
+        \item Xây dựng \textbf{Multi-Agent AI Content Planner} bằng LangChain.js và LangGraph, điều phối 5 AI agent chuyên biệt (Trend, Strategy, Content, QA, Reminder) với luồng streaming thời gian thực qua Server-Sent Events (SSE)
+        \item Thiết kế engine \textbf{``Business DNA''}, chuẩn hoá bộ nhận diện thương hiệu thành ngữ cảnh sẵn sàng cho LLM với prompt builder động, quản lý token thông minh và caching bằng Redis nhằm giữ nhất quán giọng điệu thương hiệu
+        \item Triển khai giao diện \textbf{Multimodal AI Chat} có khả năng hiểu hình ảnh và xử lý tài liệu, cho phép người dùng điều khiển hệ thống bằng ngôn ngữ tự nhiên
+        \item Phát triển tính năng đăng bài và lên lịch đa nền tảng (Facebook, Instagram, TikTok, Threads, Zalo OA) cùng pipeline News-to-Content dựa trên AI và phân tích cảm xúc
+        \item Xây dựng kiến trúc full-stack có khả năng mở rộng, tự phát triển thư viện UI component (design system) và quản lý vòng đời schema cơ sở dữ liệu bằng \textbf{Prisma ORM}
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
-% --- ActsOne ---
-\begin{twocolentry}{\textit{2024 -- Tháng 4 2025}}
-    \textbf{ActsOne} \\[4pt]
-    \textit{Kiến trúc sư Giải pháp / Kỹ sư Hệ thống}
+% --- MindX ---
+\begin{twocolentry}{\textit{06/2025 -- 12/2025}}
+    \textbf{Trường Công nghệ MindX} \\[4pt]
+    \textit{Giáo viên Lập trình (Bán thời gian)}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Xây dựng nền tảng xử lý đơn hàng (Golang, gRPC, DDD) tích hợp Shopee, Lazada, TikTok với quản lý phiên bản tồn kho và khóa phân tán, cung cấp qua API Gateway có tài liệu Swagger/Scalar và Redis caching.
-        \item Thiết kế và vận hành hạ tầng IDC on-premise (Proxmox VE, Kubernetes, lưu trữ NAS, mạng) với failover HA và lưu trữ phân tầng hot/warm/cold quản lý vòng đời dữ liệu.
-        \item Cấu hình nhân bản MySQL/PostgreSQL (master-slave, multi-master) để đảm bảo tính sẵn sàng cao.
-        \item Kiến trúc nền tảng bảo mật zero-trust (Cloudflare ZeroTrust, đường hầm bảo mật, WAF, chống DDoS) và mạng lưới bảo mật toàn công ty (DrayTek firewall, Headscale với WireGuard/Tailscale).
-        \item Xây dựng hạ tầng giám sát SRE và pipeline CI/CD (GitHub Actions, Drone CI); triển khai cụm k8s/k3s qua Ansible với lưu trữ bền vững Longhorn.
-        \item Triển khai Authentik làm IdP trung tâm (SSO, MFA, RBAC) cho các dịch vụ nội bộ.
+        \item \textbf{Giảng dạy lập trình:} Giảng dạy các khái niệm lập trình từ nền tảng đến nâng cao cho học viên độ tuổi 8--16
+        \item \textbf{Học qua dự án:} Hướng dẫn học viên đi qua trọn vòng đời phát triển phần mềm, từ ý tưởng đến triển khai ứng dụng và website
+        \item \textbf{Cố vấn \& review:} Thực hiện code review và phản hồi cá nhân hoá nhằm rèn luyện khả năng tự giải quyết vấn đề cho học viên
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
-% --- Kays.vn ---
-\begin{twocolentry}{\textit{2023}}
-    \textbf{Kays.vn} \\[4pt]
-    \textit{Kỹ sư Backend}
+% --- BBI ---
+\begin{twocolentry}{\textit{05/2025 -- 09/2025}}
+    \textbf{Công ty TNHH BBI} \\[4pt]
+    \textit{AI Automation Developer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Xây dựng module backend đa nền tảng bằng Rust để xử lý giao dịch, hỗ trợ mã hóa và xử lý dữ liệu bảo mật.
-        \item Thiết kế pipeline dữ liệu thời gian thực hướng sự kiện bằng AWS EventBridge để đồng bộ giữa Supabase và các hệ thống cũ.
-        \item Phát triển RESTful API và microservice \textbf{Golang} cho phân hệ danh mục sản phẩm và quản lý đơn hàng; đào tạo 4 thực tập sinh về kiến trúc backend và tối ưu hiệu năng.
+        \item \textbf{Tự động hoá end-to-end:} Xây dựng các workflow ổn định bằng \textbf{n8n} và Python, tích hợp API bên thứ ba trong môi trường production thực tế, bao gồm AI hội thoại phục vụ bán hàng và chăm sóc khách hàng
+        \item \textbf{Chiến lược AI \& R\&D:} Chủ động nghiên cứu, dựng prototype và đưa các công cụ AI mới vào ứng dụng để giải quyết các bài toán trọng yếu của doanh nghiệp
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
-% --- IVS ---
-\begin{twocolentry}{\textit{2022}}
-    \textbf{IVS Technology Solutions} \\[4pt]
-    \textit{Lập trình viên Backend}
+% --- VNGroup Tourist ---
+\begin{twocolentry}{\textit{11/2024 -- 04/2025}}
+    \textbf{Công ty TNHH VNGroup Tourist} \\[4pt]
+    \textit{Full-stack Web Developer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Phát triển và bảo trì RESTful API bằng SpringBoot (Java) cho các module nghiệp vụ cốt lõi, thiết kế schema cơ sở dữ liệu và tầng truy cập dữ liệu cho khối lượng đọc/ghi thông lượng cao.
-        \item Tối ưu truy vấn MongoDB/MySQL bằng chiến lược lập chỉ mục và phân tích truy vấn giúp giảm 40\% thời gian phản hồi, đồng thời xây dựng pipeline CI/CD bằng Jenkins tự động hóa kiểm thử và triển khai.
+        \item \textbf{Phát triển full-stack:} Thiết kế kiến trúc và triển khai hệ thống backend hiệu năng cao (Python/Flask, PostgreSQL) kết hợp frontend động (Vue.js)
+        \item \textbf{DevOps \& triển khai:} Đảm bảo môi trường production an toàn, ổn định và có khả năng mở rộng bằng Docker và Nginx
+        \item \textbf{Tự động hoá quy trình:} Triển khai các workflow n8n tối ưu vận hành nội bộ, bao gồm tự động đăng nội dung SEO, quản lý email và xử lý tác vụ
     \end{highlights}
 \end{onecolentry}
+
 
 \section{Kỹ năng Công nghệ}
 \begin{onecolentry}
 \begin{highlights}
-    \item \textbf{DevSecOps:} Trivy, gitleaks, SonarQube (SAST/SCA), xử lý CVE \& phụ thuộc, gia cố container (non-root, seccomp), NetworkPolicy, quản lý bí mật, Zero-Trust, NGFW/WAF
-    \item \textbf{Kubernetes \& CI/CD:} RKE2, k8s/k3s, Rancher, Helm, Docker, containerd, registry OCI nội bộ, probe \& định mức tài nguyên; Jenkins (multibranch), GitLab CI, GitHub Actions, Drone CI
-    \item \textbf{MLOps \& Kỹ thuật Dữ liệu:} vận hành GPU NVIDIA (A100, CUDA), MLflow, phục vụ mô hình thị giác máy tính; Kafka, Debezium/Kafka Connect (CDC), Apache Airflow, Spark, NiFi, Elasticsearch, MinIO (S3)
-    \item \textbf{Cơ sở dữ liệu:} PostgreSQL/PostGIS (logical replication, tuning), MySQL, MongoDB, Redis, DuckDB
-    \item \textbf{Giám sát \& SRE:} Zabbix, Grafana, LibreNMS, alert engineering, phân tích nguyên nhân gốc sự cố, DR/backup (Veeam, RPO/RTO)
-    \item \textbf{Hạ tầng \& Mạng:} IDC on-premise, Proxmox VE, VMware vSphere (HA/vMotion/DRS), Linux, Ansible, SAN/NAS phân tầng, Nginx (reverse proxy, WebSocket, TLS), Cloudflare Tunnel/ZeroTrust, VLAN, cân bằng tải, VPN (WireGuard/Tailscale), NGFW/WAF
-    \item \textbf{Lập trình:} Go, Python, C/C++, Java, Rust, JavaScript/TypeScript, Bash; gRPC, DDD, Microservices
-    \item \textbf{Lĩnh vực:} Không gian địa lý \& 3D (PostGIS, vector tiles, 3DCityDB/CityGML, BIM/AEC); Viễn thông \& RF (tối ưu vô tuyến Ericsson \& Nokia, phân tích hiệu năng RF, KPI mạng)
+    \item \textbf{Backend \& Web API:} Node.js, NestJS, RESTful API, FastAPI, Prisma, PostgreSQL, Redis, BullMQ, Odoo
+    \item \textbf{Frontend:} React, Next.js, TypeScript, HTML5, CSS3, Tailwind CSS, Payload CMS
+    \item \textbf{AI \& Hệ thống RAG:} LangChain.js, LangGraph, LlamaIndex, Qdrant, điều phối multi-agent
+    \item \textbf{SaaS \& Hệ thống Doanh nghiệp:} SaaS multi-tenant, migration ERP, CMS, kiến trúc sẵn sàng cho eCommerce
+    \item \textbf{DevOps \& Giám sát:} Docker, Nginx, CI/CD cơ bản, Prometheus, Loki
+    \item \textbf{Kiểm thử \& Chất lượng mã nguồn:} Jest, Cypress/Playwright, SonarQube, code review
+    \item \textbf{Thực hành Kỹ thuật:} Git/GitHub, GitLab, clean code, unit testing cơ bản
 \end{highlights}
 \end{onecolentry}
 
 \section{Thành tựu}
 \begin{onecolentry}
     \begin{highlights}
-        \item Giải pháp Tốt nhất (Best Solution Award) - ActsOne (2024)
-        \item Nhân viên Xuất sắc (Outstanding Employee) - Kays.vn (2023)
-        \item Thực tập sinh Triển vọng (Most Promising Intern Award) - IVS Technology Solutions (2022)
-        \item Học bổng Khuyến khích Học tập (Academic Excellence Scholarship) - HCMUT (2019, 2022)
-        \item Giải thưởng Dự án Sinh viên (Điểm: 9.30/10) - HCMUT (2022)
+        \item \textbf{Giải Nhì Nghiên cứu Khoa học cấp Trường} --- Đại học Tôn Đức Thắng (2025). Phát triển ứng dụng dùng nhận dạng giọng nói và NLP để đưa ra phản hồi cá nhân hoá và chấm điểm tự động cho phần thi IELTS Speaking và Writing.
+        \item \textbf{Giải Ba Nghiên cứu Khoa học cấp Trường} --- Đại học Tôn Đức Thắng (2024). Nghiên cứu nhận diện thực thể tự động trong sơ đồ Thực thể --- Quan hệ (ERD) bằng các kỹ thuật xử lý ngôn ngữ tự nhiên.
     \end{highlights}
 \end{onecolentry}

@@ -23,7 +23,7 @@ jobs:
       - name: Compile Resume (XeLaTeX)
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: "main.tex main_vi.tex MBF_main_vi.tex go_devops_main.tex system_main.tex fullstack_main.tex"
+          root_file: "main.tex main_vi.tex"
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           extra_system_packages: |
@@ -34,12 +34,8 @@ jobs:
 
       - name: Rename Resume PDF
         run: |
-          cp main.pdf Pham_Huy_Thanh_Resume.pdf
-          cp main_vi.pdf Pham_Huy_Thanh_Resume_VI.pdf
-          cp MBF_main_vi.pdf Pham_Huy_Thanh_Digital_Specialist_VI.pdf
-          cp go_devops_main.pdf Pham_Huy_Thanh_Backend_DevOps.pdf
-          cp system_main.pdf Pham_Huy_Thanh_System_Engineer.pdf
-          cp fullstack_main.pdf Pham_Huy_Thanh_FullStack.pdf
+          cp main.pdf Truong_Vinh_Khuong_Resume.pdf
+          cp main_vi.pdf Truong_Vinh_Khuong_Resume_VI.pdf
 
       - name: Compile Cover Letter (XeLaTeX)
         if: hashFiles('cover_letter.tex') != ''
@@ -56,8 +52,8 @@ jobs:
       - name: Rename Cover Letter PDF
         if: hashFiles('cover_letter.tex') != ''
         run: |
-          cp cover_letter.pdf Pham_Huy_Thanh_Cover_Letter.pdf
-          cp cover_letter_vi.pdf Pham_Huy_Thanh_Cover_Letter_VI.pdf
+          cp cover_letter.pdf Truong_Vinh_Khuong_Cover_Letter.pdf
+          cp cover_letter_vi.pdf Truong_Vinh_Khuong_Cover_Letter_VI.pdf
 
       - name: List outputs
         run: ls -la *.pdf
@@ -67,14 +63,10 @@ jobs:
         with:
           name: resume-and-cover-letter
           path: |
-            Pham_Huy_Thanh_Resume.pdf
-            Pham_Huy_Thanh_Resume_VI.pdf
-            Pham_Huy_Thanh_Digital_Specialist_VI.pdf
-            Pham_Huy_Thanh_Backend_DevOps.pdf
-            Pham_Huy_Thanh_System_Engineer.pdf
-            Pham_Huy_Thanh_FullStack.pdf
-            Pham_Huy_Thanh_Cover_Letter.pdf
-            Pham_Huy_Thanh_Cover_Letter_VI.pdf
+            Truong_Vinh_Khuong_Resume.pdf
+            Truong_Vinh_Khuong_Resume_VI.pdf
+            Truong_Vinh_Khuong_Cover_Letter.pdf
+            Truong_Vinh_Khuong_Cover_Letter_VI.pdf
 
       - name: Upload logs (always)
         if: always()
@@ -86,14 +78,6 @@ jobs:
             main.aux
             main_vi.log
             main_vi.aux
-            MBF_main_vi.log
-            MBF_main_vi.aux
-            go_devops_main.log
-            go_devops_main.aux
-            system_main.log
-            system_main.aux
-            fullstack_main.log
-            fullstack_main.aux
             cover_letter.log
             cover_letter.aux
             cover_letter_vi.log
@@ -174,11 +158,7 @@ jobs:
           name: Automated Build ${{ github.run_number }}
           body_path: release_notes.md
           files: |
-            dist/Pham_Huy_Thanh_Resume.pdf
-            dist/Pham_Huy_Thanh_Resume_VI.pdf
-            dist/Pham_Huy_Thanh_Digital_Specialist_VI.pdf
-            dist/Pham_Huy_Thanh_Backend_DevOps.pdf
-            dist/Pham_Huy_Thanh_System_Engineer.pdf
-            dist/Pham_Huy_Thanh_FullStack.pdf
-            dist/Pham_Huy_Thanh_Cover_Letter.pdf
-            dist/Pham_Huy_Thanh_Cover_Letter_VI.pdf
+            dist/Truong_Vinh_Khuong_Resume.pdf
+            dist/Truong_Vinh_Khuong_Resume_VI.pdf
+            dist/Truong_Vinh_Khuong_Cover_Letter.pdf
+            dist/Truong_Vinh_Khuong_Cover_Letter_VI.pdf

@@ -8,7 +8,7 @@ This directory contains the GitHub Actions workflow configuration for automated 
 
 ## 🎯 Workflow Overview
 
-The workflow automatically builds a LaTeX resume PDF, uploads artifacts, and creates GitHub releases with changelogs.
+The workflow builds four PDFs — the English and Vietnamese resumes plus both cover letters — uploads them as artifacts, and creates GitHub releases with changelogs.
 
 ## 🔄 Workflow Jobs
 
@@ -20,18 +20,20 @@ The workflow automatically builds a LaTeX resume PDF, uploads artifacts, and cre
 
 1. **Checkout**: Clones the repository
 2. **Diagnose**: Displays diagnostic information (branch, commit SHA, file listing)
-3. **Compile LaTeX (XeLaTeX)**: 
+3. **Compile Resume (XeLaTeX)**:
    - Uses `xu-cheng/latex-action@v3` for compilation
-   - Compiles `main.tex` using XeLaTeX
+   - Compiles `main.tex` and `main_vi.tex` using XeLaTeX
    - Installs required packages: `fontawesome5`, `fontspec`, `lm`, `babel-english`
    - Enables shell escape for advanced features
-4. **Publish PDF**: Copies `main.pdf` to `Pham_Huy_Thanh_Resume.pdf`
-5. **Upload Artifact (PDF)**: Uploads PDF as artifact named `resume-pdf`
-6. **Upload Logs**: Uploads compilation logs (always, even on failure)
+4. **Rename Resume PDF**: `main.pdf` → `Truong_Vinh_Khuong_Resume.pdf`, `main_vi.pdf` → `Truong_Vinh_Khuong_Resume_VI.pdf`
+5. **Compile Cover Letter**: Same action over `cover_letter.tex` and `cover_letter_vi.tex` (skipped if the files are absent)
+6. **Rename Cover Letter PDF**: → `Truong_Vinh_Khuong_Cover_Letter.pdf` / `_VI.pdf`
+7. **Upload Artifact (PDFs)**: Uploads all four PDFs
+8. **Upload Logs**: Uploads compilation logs (always, even on failure)
 
-**Output**: 
-- PDF artifact: `resume-pdf`
-- Logs artifact: `resume-logs` (contains `.log`, `.aux`, `.toc`, `.lof`, `.lot` files)
+**Output**:
+- PDF artifact: `resume-and-cover-letter`
+- Logs artifact: `build-logs` (contains the `.log` and `.aux` files for each root)
 
 ### Job 2: `release`
 
@@ -45,13 +47,13 @@ The workflow automatically builds a LaTeX resume PDF, uploads artifacts, and cre
    - Generates changelog from commits since last build
    - Creates `release_notes.md` file
    - Falls back to recent commits if no previous build found
-3. **Download Artifact**: Downloads the PDF artifact from `build-pdf` job
+3. **Download Artifact**: Downloads the PDF artifact from `build-pdf` job into `dist/`
 4. **Create GitHub Release**:
    - Creates release with tag: `build-{run_number}`
    - Uses generated changelog as release notes
-   - Attaches PDF to release
+   - Attaches all four PDFs to the release
 
-**Output**: GitHub Release with PDF attachment
+**Output**: GitHub Release with the resume and cover letter PDFs attached
 
 ## 🔍 Changelog Generation Logic
 
@@ -89,12 +91,13 @@ pre_compile: |
 ### LaTeX Compilation Settings
 
 ```yaml
-root_file: main.tex
+root_file: "main.tex main_vi.tex"
 latexmk_use_xelatex: true
 latexmk_shell_escape: true
 ```
 
-- **XeLaTeX**: Required for font support and Unicode
+- **`root_file`**: A space-separated list — every root listed here is compiled in one step
+- **XeLaTeX**: Required for font support and Unicode (Vietnamese diacritics in `main_vi.tex`)
 - **Shell Escape**: Required for some advanced LaTeX features
 
 ### Permissions
@@ -118,10 +121,11 @@ permissions:
 ### Build Fails
 
 **Check**:
-1. View logs in Actions tab
+1. View logs in Actions tab, or download the `build-logs` artifact
 2. Check for missing LaTeX packages
-3. Verify `main.tex` syntax is correct
+3. Verify the syntax of the failing root file and the shared `preamble.tex` / `header.tex`
 4. Ensure all required packages are listed in `pre_compile`
+5. If a root file was added or removed, update `root_file`, the `cp` rename steps, and **both** upload lists plus the release `files` list — a missing file fails the release job
 
 **Common Issues**:
 - Missing package: Add to `pre_compile` section
@@ -146,7 +150,7 @@ permissions:
 
 **Check**:
 1. Ensure `build-pdf` job completed successfully
-2. Verify artifact name matches: `resume-pdf`
+2. Verify artifact name matches: `resume-and-cover-letter`
 3. Check artifact retention settings (default: 90 days)
 
 ## 🔐 Security Considerations

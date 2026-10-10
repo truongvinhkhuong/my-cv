@@ -1,133 +1,117 @@
 \section{Introduction}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{DevSecOps \& Platform Engineer} with \textbf{4+ years} across cloud-native platform engineering, backend development (Golang), and enterprise/telecom infrastructure --- currently owning production Kubernetes platforms serving a national-scale digital-twin and geospatial system
-        \item \textbf{DevSecOps:} shift-left security in CI/CD (SAST, SCA, secret and container image scanning), CVE remediation, container hardening, and least-privilege platform policy
-        \item \textbf{MLOps \& Data:} GPU compute operations (NVIDIA A100), CI/CD for computer-vision model services, experiment tracking, and streaming/batch data pipelines (Kafka, CDC, Airflow, Spark)
-        \item \textbf{Infrastructure \& SRE:} Kubernetes (RKE2/k3s), on-prem IDC, virtualization, observability, incident root-cause analysis, and zero-downtime release engineering
+        \item \textbf{Software Developer} with nearly \textbf{2 years} of experience delivering full-stack products end-to-end --- from system design and API architecture to deployment and production support
+        \item Experience spans \textbf{enterprise ERP migration}, \textbf{RAG-based chatbot systems}, and \textbf{founding-engineer} work building an AI-powered SaaS platform from the ground up
+        \item Strong interest in SaaS, eCommerce, and applying AI to real-world business workflows
     \end{highlights}
 \end{onecolentry}
 
 
 \section{Education}
-\begin{twocolentry}{\textit{2019 -- 2023}}
-    \textbf{Ho Chi Minh City University of Technology - Vietnam National University (VNU-HCM)}\\[4pt]
-    \textit{Bachelor of Science in Computer Science}
+\begin{twocolentry}{\textit{2022 -- 2026}}
+    \textbf{Ton Duc Thang University}\\[4pt]
+    \textit{Bachelor of Science in Software Engineering} --- Expected Graduation 2026
 \end{twocolentry}
 
-
-\section{Languages}
-\begin{onecolentry}
-    \begin{highlights}
-        \item English, IELTS: 6.0
-    \end{highlights}
-\end{onecolentry}
 
 \section{Experience}
 
-% --- VNPT (Current) ---
-\begin{twocolentry}{\textit{Apr 2026 -- Present}}
-    \textbf{VNPT Information Technology (VNPT-IT)} \\[4pt]
-    \textit{DevSecOps \& Platform Engineer (Kubernetes / MLOps)}
+% --- Truong Dinh Holdings (Current) ---
+\begin{twocolentry}{\textit{Oct 2025 -- Present}}
+    \textbf{Truong Dinh Holdings Co., Ltd} \\[4pt]
+    \textit{Software Developer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Platform owner for a production on-premises \textbf{Kubernetes (RKE2)} estate --- bare-metal nodes totalling \textbf{140 vCPU / 400+ GB RAM / NVIDIA A100 80GB}, running \textbf{100+ pods} across 20+ namespaces and 70+ deployments at 99\% workload health
-        \item Built and operate \textbf{30+ CI/CD pipelines} (Jenkins multibranch, GitLab CI) spanning .NET, Go, Node.js and Python/AI services --- build, test, scan, publish to a private OCI registry, and deploy via Rancher; standardised the pipeline template and rolled it to 18 repositories through GitLab API automation
-        \item \textbf{DevSecOps:} embedded shift-left security into every pipeline --- \textbf{Trivy} image/filesystem scanning, \textbf{gitleaks} secret detection and \textbf{SonarQube} quality gates; led a security audit across \textasciitilde30 repositories and drove remediation of critical dependency advisories
-        \item Hardened the container platform: non-root workloads with enforced \texttt{runAsNonRoot}/\texttt{seccomp} profiles, NetworkPolicy segmentation, registry pull secrets, and removal of committed credentials from source history
-        \item Delivered a zero-downtime \textbf{.NET 6 $\rightarrow$ .NET 8} migration of two core microservices --- eliminated 16 shadowed legacy assemblies by moving to \texttt{FrameworkReference}, cleared 4 HIGH-severity advisories, and rebuilt images across a base-OS change (PEP 668 virtualenv, native library resolution) with pre-flight validation against production configuration
-        \item Root-caused a multi-hour production outage to a global .NET roll-forward override; fixed at source and hardened the platform afterwards with \textbf{startup/readiness probes} and resource governance, converting disruptive restarts into zero-downtime rolling updates
-        \item \textbf{MLOps:} operate GPU compute (A100 80GB) and CI/CD for computer-vision model services --- object/text detection, licence-plate recognition, image anonymisation and HD-map generation --- alongside \textbf{MLflow} experiment tracking and \textbf{Airflow / Spark / NiFi} data pipelines
-        \item \textbf{Data \& streaming:} deployed \textbf{Debezium / Kafka Connect} change-data-capture on PostgreSQL logical replication with WAL-retention safeguards; operate Kafka, Redis, Elasticsearch, MongoDB, PostgreSQL/PostGIS and \textbf{MinIO} object storage
-        \item \textbf{Observability:} built centralised \textbf{Zabbix + Grafana} monitoring --- custom templates, low-level discovery, per-host threshold tuning and severity-based Telegram escalation with rendered graphs; removed chronic alert noise that had been masking genuine hardware failure
-        \item Operate the \textbf{Nginx} edge tier: TLS termination via Cloudflare Tunnel, credentialed CORS, WebSocket/SignalR upgrade paths, and vector-tile delivery for 3D geospatial and BIM/CityGML workloads
+        \item \textbf{Technologies:} Odoo Community, Node.js, NestJS, Next.js, TypeScript, Payload CMS, FastAPI, PostgreSQL, Redis, BullMQ, Qdrant, LlamaIndex, Jest, Cypress, SonarQube, Docker, Nginx
+        \item Supported a phased migration from the legacy \textbf{Bravo ERP} system to \textbf{Odoo Community}, covering inventory, customer data, and financial reporting workflows
+        \item Designed database schemas and RESTful APIs for internal enterprise modules, ensuring maintainable and integration-ready backend services
+        \item Built and deployed \textbf{toanthang.vn}, a bilingual corporate website/platform using Next.js, Node.js/NestJS, PostgreSQL, Redis, Docker and Nginx, with Payload CMS integrated for content management across company pages and business information
+        \item Developed a \textbf{RAG chatbot} for toanthang.vn using FastAPI, LlamaIndex, Qdrant, Redis and company documents to support customer information lookup and automated Q\&A; built background task pipelines with BullMQ and Redis for document processing, chatbot indexing, and workflow automation
+        \item Configured deployment and monitoring using Docker, Nginx, \textbf{Prometheus} and \textbf{Loki} for stable production operations
+        \item Implemented unit tests with \textbf{Jest} and end-to-end tests with \textbf{Cypress} for critical workflows, and integrated \textbf{SonarQube} into the development process to maintain code quality across backend services
+        \item Researched and shared suitable technologies and automation solutions to support digital transformation initiatives
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
-% --- MobiFone ---
-\begin{twocolentry}{\textit{Apr 2025 -- Apr 2026}}
-    \textbf{MobiFone Telecommunications Corporation} \\[4pt]
-    \textit{RAN Optimization Engineer (Ericsson/Nokia) \& System Engineer}
+% --- UMIC ---
+\begin{twocolentry}{\textit{Nov 2025 -- Jun 2026}}
+    \textbf{UMIC (umic.ai)} --- AI-Powered Digital Marketing SaaS Platform \\[4pt]
+    \textit{Founding Engineer (Part-time)}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item RAN Optimization Specialist: independently analysed, audited and optimised 4G/5G radio networks on Ericsson and Nokia equipment --- improving KPIs through RF coverage tuning, drop-call resolution and congestion mitigation
-        \item Architected and deployed high-availability enterprise IT infrastructure across Dell/HPE physical servers and tiered SAN/NAS storage, leading full integration lifecycles from site survey and HLD/LLD design through pilot and UAT to handover
-        \item Engineered scalable virtualization clusters on VMware vSphere and Proxmox VE with High Availability, vMotion and DRS to maximise system availability
-        \item Administered centralised Microsoft enterprise infrastructure --- Active Directory Domain Services, highly available DNS/DHCP, Network Policy Server and File Services --- alongside Core/Distribution/Access network design with VLAN routing and IP subnetting
-        \item Enforced telecom-grade security posture (NGFW, WAF, site-to-site VPN, Layer 7 load balancing) and governed Disaster Recovery using Veeam Backup \& Replication, SRM and multi-site replication to meet strict RPO/RTO targets
-        \item Centralised observability with LibreNMS, Zabbix and Grafana; engineered \textbf{Golang} backend microservices for telecom data analytics pipelines and maintained Python-based Smart OTP authentication
+        \item \textbf{Technologies:} React, TypeScript, Node.js/NestJS, Prisma, PostgreSQL, Redis, Docker, LangChain.js, LangGraph
+        \item Architected and developed a comprehensive \textbf{multi-tenant SaaS platform} from scratch, leveraging AI to automate and optimize digital marketing workflows for businesses
+        \item Engineered a \textbf{Multi-Agent AI Content Planner} using LangChain.js and LangGraph, orchestrating 5 specialized AI agents (Trend, Strategy, Content, QA, Reminder) with real-time Server-Sent Events (SSE) streaming
+        \item Designed the \textbf{``Business DNA''} engine, standardizing brand identities into LLM-ready contexts with a dynamic prompt builder, intelligent token management, and Redis caching to ensure brand voice consistency
+        \item Implemented a \textbf{Multimodal AI Chat} interface capable of image understanding and document processing, allowing users to control the system via natural language
+        \item Developed cross-platform auto-posting and scheduling features (Facebook, Instagram, TikTok, Threads, Zalo OA) supported by an AI-driven News-to-Content pipeline and sentiment analysis
+        \item Established a scalable full-stack architecture, built a custom UI component library (design system), and managed the database schema lifecycle using \textbf{Prisma ORM}
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
-% --- ActsOne ---
-\begin{twocolentry}{\textit{2024 -- Apr 2025}}
-    \textbf{ActsOne} \\[4pt]
-    \textit{Solution Architect / System Engineer}
+% --- MindX ---
+\begin{twocolentry}{\textit{Jun 2025 -- Dec 2025}}
+    \textbf{MindX Technology School} \\[4pt]
+    \textit{Coding Teacher (Part-time)}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built an order-processing platform (Golang, gRPC, DDD) integrating Shopee, Lazada and TikTok with inventory versioning and distributed locking, exposed through a documented API gateway with Redis caching
-        \item Designed and operated on-prem IDC infrastructure (Proxmox VE, Kubernetes, NAS storage, networking) with HA failover and hot/warm/cold storage tiering for data lifecycle management
-        \item Configured MySQL/PostgreSQL replication (master-slave, multi-master) for high availability
-        \item Architected a zero-trust security platform (Cloudflare ZeroTrust, secure tunnels, WAF, DDoS protection) and a company-wide secure network (DrayTek firewalls, Headscale with WireGuard/Tailscale)
-        \item Built SRE monitoring and CI/CD pipelines (GitHub Actions, Drone CI); deployed k8s/k3s clusters via Ansible with Longhorn persistent storage
-        \item Implemented Authentik as the centralised identity provider (SSO, MFA, RBAC) for internal services
+        \item \textbf{Programming Instruction:} Taught foundational to advanced coding concepts to students aged 8--16
+        \item \textbf{Project-Based Learning:} Guided students through the full software lifecycle, from ideation to deployment of apps and websites
+        \item \textbf{Mentorship \& Review:} Conducted code reviews and provided personalized feedback to foster independent problem-solving skills
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
-% --- Kays.vn ---
-\begin{twocolentry}{\textit{2023}}
-    \textbf{Kays.vn} \\[4pt]
-    \textit{Backend Engineer}
+% --- BBI ---
+\begin{twocolentry}{\textit{May 2025 -- Sep 2025}}
+    \textbf{BBI Co., Ltd.} \\[4pt]
+    \textit{AI Automation Developer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built Rust backend modules for cross-platform transaction processing with encryption and secure data handling
-        \item Designed a real-time event-driven data pipeline on AWS EventBridge to sync Supabase with legacy systems
-        \item Engineered RESTful APIs and \textbf{Golang} microservices for product catalogue and high-throughput order management; mentored junior developers on backend architecture and performance optimisation
+        \item \textbf{End-to-End Automation:} Engineered robust workflows using \textbf{n8n} and Python, integrating third-party APIs within a live production environment, including conversational AI for sales and customer service
+        \item \textbf{AI Strategy \& R\&D:} Spearheaded the adoption of emerging AI tools through research and prototyping to solve critical business challenges
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
-% --- IVS ---
-\begin{twocolentry}{\textit{2022}}
-    \textbf{IVS} \\[4pt]
-    \textit{Backend Developer}
+% --- VNGroup Tourist ---
+\begin{twocolentry}{\textit{Nov 2024 -- Apr 2025}}
+    \textbf{VNGroup Tourist Co., Ltd} \\[4pt]
+    \textit{Full-stack Web Developer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Developed and maintained RESTful APIs with SpringBoot (Java) for core business modules, designing database schemas and data access layers for high-throughput read/write workloads
-        \item Optimised MongoDB/MySQL queries through indexing strategies and profiling to cut system latency, and established a Jenkins CI/CD pipeline for automated testing and deployment
+        \item \textbf{Full-stack development:} Architected and deployed high-performance backend systems (Python/Flask, PostgreSQL) complemented by dynamic frontends (Vue.js)
+        \item \textbf{DevOps \& deployment:} Ensured a secure, stable, and scalable production environment using Docker and Nginx
+        \item \textbf{Workflow Automation:} Implemented n8n workflows to optimize internal operations, covering automated SEO content posting, email management, and task handling
     \end{highlights}
 \end{onecolentry}
 
 
-\section{Technical Skills \& Interests}
+\section{Technical Skills}
 \begin{onecolentry}
 \begin{highlights}
-    \item \textbf{DevSecOps:} Trivy, gitleaks, SonarQube (SAST/SCA), CVE \& dependency remediation, container hardening (non-root, seccomp), NetworkPolicy, secret management, Zero-Trust, NGFW/WAF
-    \item \textbf{Kubernetes \& CI/CD:} RKE2, k8s/k3s, Rancher, Helm, Docker, containerd, private OCI registry, probes \& resource governance; Jenkins (multibranch), GitLab CI, GitHub Actions, Drone CI
-    \item \textbf{MLOps \& Data Engineering:} NVIDIA GPU operations (A100, CUDA), MLflow, computer-vision model serving; Kafka, Debezium/Kafka Connect (CDC), Apache Airflow, Spark, NiFi, Elasticsearch, MinIO (S3)
-    \item \textbf{Databases:} PostgreSQL/PostGIS (logical replication, tuning), MySQL, MongoDB, Redis, DuckDB
-    \item \textbf{Observability \& SRE:} Zabbix, Grafana, LibreNMS, alert engineering, incident root-cause analysis, DR/backup (Veeam, RPO/RTO)
-    \item \textbf{Infrastructure \& Networking:} On-Prem IDC, Proxmox VE, VMware vSphere (HA/vMotion/DRS), Linux, Ansible, SAN/NAS tiering, Nginx (reverse proxy, WebSocket, TLS), Cloudflare Tunnel/ZeroTrust, VLAN, Load Balancing, VPN (WireGuard/Tailscale), NGFW/WAF
-    \item \textbf{Programming:} Go, Python, C/C++, Java, Rust, JavaScript/TypeScript, Bash; gRPC, DDD, Microservices
-    \item \textbf{Domain:} Geospatial \& 3D (PostGIS, vector tiles, 3DCityDB/CityGML, BIM/AEC); Telecom \& RF (RAN Optimization on Ericsson \& Nokia, RF performance analysis, network KPIs)
+    \item \textbf{Backend \& Web API:} Node.js, NestJS, RESTful API, FastAPI, Prisma, PostgreSQL, Redis, BullMQ, Odoo
+    \item \textbf{Frontend:} React, Next.js, TypeScript, HTML5, CSS3, Tailwind CSS, Payload CMS
+    \item \textbf{AI \& RAG Systems:} LangChain.js, LangGraph, LlamaIndex, Qdrant, multi-agent orchestration
+    \item \textbf{SaaS \& Enterprise Systems:} Multi-tenant SaaS, ERP migration, CMS, eCommerce-ready architecture
+    \item \textbf{DevOps \& Monitoring:} Docker, Nginx, CI/CD basics, Prometheus, Loki
+    \item \textbf{Testing \& Code Quality:} Jest, Cypress/Playwright, SonarQube, code review
+    \item \textbf{Engineering Practices:} Git/GitHub, GitLab, clean code, unit testing basics
 \end{highlights}
 \end{onecolentry}
 
 \section{Achievements}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Best Solution Award} - ActsOne (2024)
-        \item \textbf{Outstanding Employee} - Kays.vn (2023)
-        \item \textbf{Most Promising Intern Award} - IVS Technology Solutions (2022)
-        \item Academic Excellence Scholarship - HCMUT (2019, 2022)
-        \item Student Scholarship Project Award (Score: 9.30/10) - HCMUT (2022)
+        \item \textbf{Second Prize, University-Level Scientific Research Award} --- Ton Duc Thang University (2025). Developed an application using speech recognition and NLP to provide personalized feedback and automated grading for IELTS speaking and writing.
+        \item \textbf{Third Prize, University-Level Scientific Research Award} --- Ton Duc Thang University (2024). Research on automatic entity recognition in Entity-Relationship Diagrams using natural language processing techniques.
     \end{highlights}
 \end{onecolentry}
