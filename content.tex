@@ -1,9 +1,9 @@
 \section{Introduction}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Software Developer} with nearly \textbf{2 years} of experience delivering full-stack products end-to-end --- from system design and API architecture to deployment and production support
-        \item Experience spans \textbf{enterprise ERP migration}, \textbf{RAG-based chatbot systems}, and \textbf{founding-engineer} work building an AI-powered SaaS platform from the ground up
-        \item Strong interest in SaaS, eCommerce, and applying AI to real-world business workflows
+        \item \textbf{Full-stack Developer} with \textbf{2 years} of experience building commerce and enterprise platforms end-to-end, spanning React/Next.js frontends, Node.js/NestJS backends, PostgreSQL data models, CI/CD and production operations
+        \item Core engineer behind \textbf{Tierra Diamond}'s commerce and customer platform (Zalo Mini App, REST APIs, Medusa v2, ERP and data-warehouse integrations); previously ERP migration, a RAG chatbot, and \textbf{founding engineer} of an AI SaaS
+        \item Works independently from design to production, with a focus on \textbf{clean, maintainable code}, database schema design and query optimization, performance and clear documentation
     \end{highlights}
 \end{onecolentry}
 
@@ -11,27 +11,42 @@
 \section{Education}
 \begin{twocolentry}{\textit{2022 -- 2026}}
     \textbf{Ton Duc Thang University}\\[4pt]
-    \textit{Bachelor of Science in Software Engineering} --- Expected Graduation 2026
+    \textit{Bachelor of Science in Software Engineering} --- Graduated 2026
 \end{twocolentry}
 
 
 \section{Experience}
 
-% --- Truong Dinh Holdings (Current) ---
-\begin{twocolentry}{\textit{Oct 2025 -- Present}}
+% --- Tierra Diamond (Current) ---
+\begin{twocolentry}{\textit{Aug 2026 -- Present}}
+    \textbf{Tierra Diamond} --- Luxury Diamond Jewelry Brand \\[4pt]
+    \textit{Full-stack Developer}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Technologies:} Next.js, React, TypeScript, NestJS, Medusa v2, Payload CMS, PostgreSQL, Drizzle, Redis, RabbitMQ, FastAPI, Docker, GitHub Actions
+        \item \textbf{Architected and built from scratch}, working independently as the core engineer, the brand's commerce and customer platform: storefront commerce (Medusa v2, Next.js, Payload CMS), a customer API and a Zalo Mini App
+        \item Built a \textbf{Zalo Mini App} with \textbf{60+ screens} from Figma designs (React, TanStack Query, Tailwind), using lazy-loaded routes, query caching and subset web fonts to keep it fast on mobile
+        \item Designed and built \textbf{30+ RESTful endpoints} in NestJS with shared Zod contracts and generated OpenAPI docs, connecting the Mini App, storefront and commerce services
+        \item \textbf{Designed PostgreSQL schemas, indexes and versioned migrations}; synced \textbf{116K+ customers and 77K+ order lines} from the data warehouse and BEONE ERP into a read-model so customer screens never query the source systems directly, with pooled connections and statement timeouts on warehouse queries
+        \item Made order processing reliable with a 6-state deposit lifecycle, idempotency keys and a \textbf{transactional outbox} to RabbitMQ, traced across services with OpenTelemetry; load-tested the API with \textbf{k6}
+        \item Set up \textbf{CI/CD on GitHub Actions} with Docker images, \textbf{160+ automated test files}, migration checks and security scans; documented the architecture and key decisions in ADRs
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+% --- Truong Dinh Holdings ---
+\begin{twocolentry}{\textit{Oct 2025 -- Jul 2026}}
     \textbf{Truong Dinh Holdings Co., Ltd} \\[4pt]
     \textit{Software Developer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Technologies:} Odoo Community, Node.js, NestJS, Next.js, TypeScript, Payload CMS, FastAPI, PostgreSQL, Redis, BullMQ, Qdrant, LlamaIndex, Jest, Cypress, SonarQube, Docker, Nginx
-        \item Supported a phased migration from the legacy \textbf{Bravo ERP} system to \textbf{Odoo Community}, covering inventory, customer data, and financial reporting workflows
-        \item Designed database schemas and RESTful APIs for internal enterprise modules, ensuring maintainable and integration-ready backend services
-        \item Built and deployed \textbf{toanthang.vn}, a bilingual corporate website/platform using Next.js, Node.js/NestJS, PostgreSQL, Redis, Docker and Nginx, with Payload CMS integrated for content management across company pages and business information
-        \item Developed a \textbf{RAG chatbot} for toanthang.vn using FastAPI, LlamaIndex, Qdrant, Redis and company documents to support customer information lookup and automated Q\&A; built background task pipelines with BullMQ and Redis for document processing, chatbot indexing, and workflow automation
-        \item Configured deployment and monitoring using Docker, Nginx, \textbf{Prometheus} and \textbf{Loki} for stable production operations
-        \item Implemented unit tests with \textbf{Jest} and end-to-end tests with \textbf{Cypress} for critical workflows, and integrated \textbf{SonarQube} into the development process to maintain code quality across backend services
-        \item Researched and shared suitable technologies and automation solutions to support digital transformation initiatives
+        \item \textbf{Technologies:} Odoo Community, NestJS, Next.js, TypeScript, Payload CMS, FastAPI, PostgreSQL, Redis, BullMQ, Qdrant, LlamaIndex, Jest, Cypress, Docker
+        \item Supported a phased migration from the legacy \textbf{Bravo ERP} to \textbf{Odoo Community} (inventory, customer data, financial reporting) and designed database schemas and RESTful APIs for internal enterprise modules
+        \item Built and deployed \textbf{toanthang.vn}, a bilingual corporate platform on Next.js, NestJS, PostgreSQL, Redis and Payload CMS, running on Docker and Nginx with \textbf{Prometheus} and \textbf{Loki} monitoring
+        \item Developed a \textbf{RAG chatbot} (FastAPI, LlamaIndex, Qdrant) answering customer questions from company documents, with BullMQ/Redis pipelines for document processing and indexing
+        \item Wrote unit tests with \textbf{Jest} and end-to-end tests with \textbf{Cypress} for critical workflows, and integrated \textbf{SonarQube} quality gates into the development process
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -43,27 +58,9 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Technologies:} React, TypeScript, Node.js/NestJS, Prisma, PostgreSQL, Redis, Docker, LangChain.js, LangGraph
-        \item Architected and developed a comprehensive \textbf{multi-tenant SaaS platform} from scratch, leveraging AI to automate and optimize digital marketing workflows for businesses
-        \item Engineered a \textbf{Multi-Agent AI Content Planner} using LangChain.js and LangGraph, orchestrating 5 specialized AI agents (Trend, Strategy, Content, QA, Reminder) with real-time Server-Sent Events (SSE) streaming
-        \item Designed the \textbf{``Business DNA''} engine, standardizing brand identities into LLM-ready contexts with a dynamic prompt builder, intelligent token management, and Redis caching to ensure brand voice consistency
-        \item Implemented a \textbf{Multimodal AI Chat} interface capable of image understanding and document processing, allowing users to control the system via natural language
-        \item Developed cross-platform auto-posting and scheduling features (Facebook, Instagram, TikTok, Threads, Zalo OA) supported by an AI-driven News-to-Content pipeline and sentiment analysis
-        \item Established a scalable full-stack architecture, built a custom UI component library (design system), and managed the database schema lifecycle using \textbf{Prisma ORM}
-    \end{highlights}
-\end{onecolentry}
-\vspace{0.2 cm}
-
-% --- MindX ---
-\begin{twocolentry}{\textit{Jun 2025 -- Dec 2025}}
-    \textbf{MindX Technology School} \\[4pt]
-    \textit{Coding Teacher (Part-time)}
-\end{twocolentry}
-\begin{onecolentry}
-    \begin{highlights}
-        \item \textbf{Programming Instruction:} Taught foundational to advanced coding concepts to students aged 8--16
-        \item \textbf{Project-Based Learning:} Guided students through the full software lifecycle, from ideation to deployment of apps and websites
-        \item \textbf{Mentorship \& Review:} Conducted code reviews and provided personalized feedback to foster independent problem-solving skills
+        \item Architected and built a \textbf{multi-tenant SaaS platform} from scratch (React, TypeScript, NestJS, Prisma, PostgreSQL), including a custom UI component library
+        \item Engineered a \textbf{Multi-Agent AI Content Planner} with LangChain.js and LangGraph, orchestrating 5 specialized agents (Trend, Strategy, Content, QA, Reminder) with real-time SSE streaming
+        \item Developed auto-posting and scheduling across 5 platforms (Facebook, Instagram, TikTok, Threads, Zalo OA), driven by a \textbf{``Business DNA''} engine that turns brand identity into LLM-ready context with Redis caching
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -75,8 +72,19 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{End-to-End Automation:} Engineered robust workflows using \textbf{n8n} and Python, integrating third-party APIs within a live production environment, including conversational AI for sales and customer service
-        \item \textbf{AI Strategy \& R\&D:} Spearheaded the adoption of emerging AI tools through research and prototyping to solve critical business challenges
+        \item Built production automation workflows with \textbf{n8n} and Python, integrating third-party APIs and conversational AI for sales and customer service
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+% --- MindX ---
+\begin{twocolentry}{\textit{Jun 2025 -- Dec 2025}}
+    \textbf{MindX Technology School} \\[4pt]
+    \textit{Coding Teacher (Part-time)}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Taught programming to students aged 8--16 through project-based learning, with code reviews and personalized feedback
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -88,9 +96,8 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Full-stack development:} Architected and deployed high-performance backend systems (Python/Flask, PostgreSQL) complemented by dynamic frontends (Vue.js)
-        \item \textbf{DevOps \& deployment:} Ensured a secure, stable, and scalable production environment using Docker and Nginx
-        \item \textbf{Workflow Automation:} Implemented n8n workflows to optimize internal operations, covering automated SEO content posting, email management, and task handling
+        \item Built and deployed full-stack web systems with Python/Flask, PostgreSQL and Vue.js on Docker and Nginx
+        \item Automated internal operations with n8n workflows for SEO content posting, email management and task handling
     \end{highlights}
 \end{onecolentry}
 
@@ -98,20 +105,21 @@
 \section{Technical Skills}
 \begin{onecolentry}
 \begin{highlights}
-    \item \textbf{Backend \& Web API:} Node.js, NestJS, RESTful API, FastAPI, Prisma, PostgreSQL, Redis, BullMQ, Odoo
-    \item \textbf{Frontend:} React, Next.js, TypeScript, HTML5, CSS3, Tailwind CSS, Payload CMS
-    \item \textbf{AI \& RAG Systems:} LangChain.js, LangGraph, LlamaIndex, Qdrant, multi-agent orchestration
-    \item \textbf{SaaS \& Enterprise Systems:} Multi-tenant SaaS, ERP migration, CMS, eCommerce-ready architecture
-    \item \textbf{DevOps \& Monitoring:} Docker, Nginx, CI/CD basics, Prometheus, Loki
-    \item \textbf{Testing \& Code Quality:} Jest, Cypress/Playwright, SonarQube, code review
-    \item \textbf{Engineering Practices:} Git/GitHub, GitLab, clean code, unit testing basics
+    \item \textbf{Frontend:} React, Next.js, TypeScript, TanStack Query, Jotai, Tailwind CSS, Zalo Mini App, Payload CMS
+    \item \textbf{Backend:} Node.js, NestJS, Medusa v2, FastAPI, RESTful API, OpenAPI, Zod, Odoo
+    \item \textbf{Database \& Messaging:} PostgreSQL (schema design, indexing, query optimization), Drizzle, Prisma, Redis, RabbitMQ, BullMQ, Qdrant
+    \item \textbf{Architecture:} event-driven design, transactional outbox, idempotency, state machines, design patterns (DI, repository), monorepo (Turborepo, pnpm)
+    \item \textbf{DevOps \& Observability:} Docker, GitHub Actions, Linux VPS, Nginx, Trivy, OpenTelemetry, Grafana (Tempo, Loki, Prometheus), k6
+    \item \textbf{Testing \& Quality:} Vitest, Jest, Cypress, Playwright, pytest, SonarQube, Git, code review
+    \item \textbf{AI:} LangChain.js, LangGraph, LlamaIndex, RAG, multi-agent orchestration
 \end{highlights}
 \end{onecolentry}
 
 \section{Achievements}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Second Prize, University-Level Scientific Research Award} --- Ton Duc Thang University (2025). Developed an application using speech recognition and NLP to provide personalized feedback and automated grading for IELTS speaking and writing.
-        \item \textbf{Third Prize, University-Level Scientific Research Award} --- Ton Duc Thang University (2024). Research on automatic entity recognition in Entity-Relationship Diagrams using natural language processing techniques.
+        \item \textbf{Honorable Mention, University Scientific Research Award} (TDTU, 2026) --- lightweight 3D CNN for seismic fault segmentation; MeanIoU 0.754 $\rightarrow$ 0.805 with a \textasciitilde17$\times$ smaller model
+        \item \textbf{Second Prize, University Scientific Research Award} (TDTU, 2025) --- speech recognition and NLP app for automated IELTS speaking and writing feedback
+        \item \textbf{Third Prize, University Scientific Research Award} (TDTU, 2024) --- NLP-based automatic entity recognition for Entity-Relationship Diagrams
     \end{highlights}
 \end{onecolentry}

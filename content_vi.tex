@@ -1,9 +1,9 @@
 \section{Giới thiệu}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Software Developer} với gần \textbf{2 năm} kinh nghiệm phát triển sản phẩm full-stack end-to-end --- từ thiết kế hệ thống, kiến trúc API đến triển khai và vận hành production
-        \item Kinh nghiệm trải rộng từ \textbf{migration ERP doanh nghiệp}, \textbf{hệ thống chatbot RAG}, đến vai trò \textbf{Founding Engineer} xây dựng nền tảng SaaS ứng dụng AI từ con số không
-        \item Quan tâm sâu tới SaaS, eCommerce và việc ứng dụng AI vào các quy trình nghiệp vụ thực tế
+        \item \textbf{Full-stack Developer} với \textbf{2 năm} kinh nghiệm xây dựng nền tảng thương mại điện tử và hệ thống doanh nghiệp end-to-end, bao gồm frontend React/Next.js, backend Node.js/NestJS, mô hình dữ liệu PostgreSQL, CI/CD và vận hành production
+        \item Kỹ sư chủ lực xây dựng nền tảng commerce và chăm sóc khách hàng của \textbf{Tierra Diamond} (Zalo Mini App, REST API, Medusa v2, tích hợp ERP và data warehouse); trước đó làm migration ERP, chatbot RAG và vai trò \textbf{Founding Engineer} cho một nền tảng SaaS ứng dụng AI
+        \item Làm việc độc lập từ thiết kế tới production, chú trọng \textbf{code sạch, dễ bảo trì}, thiết kế schema và tối ưu truy vấn cơ sở dữ liệu, hiệu năng và tài liệu rõ ràng
     \end{highlights}
 \end{onecolentry}
 
@@ -11,27 +11,42 @@
 \section{Học vấn}
 \begin{twocolentry}{\textit{2022 -- 2026}}
     \textbf{Trường Đại học Tôn Đức Thắng}\\[4pt]
-    \textit{Cử nhân Kỹ thuật Phần mềm} --- Dự kiến tốt nghiệp 2026
+    \textit{Cử nhân Kỹ thuật Phần mềm} --- Tốt nghiệp 2026
 \end{twocolentry}
 
 
 \section{Kinh nghiệm Làm việc}
 
-% --- Truong Dinh Holdings (Hiện tại) ---
-\begin{twocolentry}{\textit{10/2025 -- Hiện tại}}
+% --- Tierra Diamond (Hiện tại) ---
+\begin{twocolentry}{\textit{08/2026 -- Hiện tại}}
+    \textbf{Tierra Diamond} --- Thương hiệu trang sức kim cương cao cấp \\[4pt]
+    \textit{Full-stack Developer}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Công nghệ:} Next.js, React, TypeScript, NestJS, Medusa v2, Payload CMS, PostgreSQL, Drizzle, Redis, RabbitMQ, FastAPI, Docker, GitHub Actions
+        \item \textbf{Thiết kế kiến trúc và xây dựng từ đầu}, làm việc độc lập với vai trò kỹ sư chủ lực, nền tảng commerce và chăm sóc khách hàng của thương hiệu: commerce cho storefront (Medusa v2, Next.js, Payload CMS), customer API và Zalo Mini App
+        \item Xây dựng \textbf{Zalo Mini App} với \textbf{60+ màn hình} từ thiết kế Figma (React, TanStack Query, Tailwind), dùng lazy-load route, cache truy vấn và subset web font để chạy nhanh trên di động
+        \item Thiết kế và xây dựng \textbf{30+ RESTful endpoint} bằng NestJS với Zod contract dùng chung và tài liệu OpenAPI sinh tự động, kết nối Mini App, storefront và các service commerce
+        \item \textbf{Thiết kế schema, index và migration có phiên bản cho PostgreSQL}; đồng bộ \textbf{116K+ khách hàng và 77K+ dòng đơn hàng} từ data warehouse và ERP BEONE vào read-model để màn hình khách hàng không truy vấn trực tiếp hệ thống nguồn, kèm connection pool và statement timeout cho truy vấn warehouse
+        \item Đảm bảo xử lý đơn hàng tin cậy với vòng đời đặt cọc 6 trạng thái, idempotency key và \textbf{transactional outbox} sang RabbitMQ, tracing xuyên service bằng OpenTelemetry; load test API bằng \textbf{k6}
+        \item Dựng \textbf{CI/CD trên GitHub Actions} với Docker image, \textbf{160+ file test tự động}, kiểm tra migration và quét bảo mật; viết tài liệu kiến trúc và các quyết định kỹ thuật dưới dạng ADR
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+% --- Truong Dinh Holdings ---
+\begin{twocolentry}{\textit{10/2025 -- 07/2026}}
     \textbf{Công ty TNHH Truong Dinh Holdings} \\[4pt]
     \textit{Software Developer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Công nghệ:} Odoo Community, Node.js, NestJS, Next.js, TypeScript, Payload CMS, FastAPI, PostgreSQL, Redis, BullMQ, Qdrant, LlamaIndex, Jest, Cypress, SonarQube, Docker, Nginx
-        \item Tham gia migration theo từng giai đoạn từ hệ thống \textbf{ERP Bravo} cũ sang \textbf{Odoo Community}, bao gồm các luồng nghiệp vụ kho, dữ liệu khách hàng và báo cáo tài chính
-        \item Thiết kế schema cơ sở dữ liệu và RESTful API cho các module nội bộ của doanh nghiệp, đảm bảo backend dễ bảo trì và sẵn sàng tích hợp
-        \item Xây dựng và triển khai \textbf{toanthang.vn} --- website\slash nền tảng doanh nghiệp song ngữ dùng Next.js, Node.js\slash NestJS, PostgreSQL, Redis, Docker và Nginx, tích hợp Payload CMS để quản trị nội dung cho các trang giới thiệu và thông tin doanh nghiệp
-        \item Phát triển \textbf{chatbot RAG} cho toanthang.vn bằng FastAPI, LlamaIndex, Qdrant, Redis trên nguồn tài liệu công ty để hỗ trợ tra cứu thông tin khách hàng và tự động hoá hỏi đáp; xây dựng pipeline xử lý nền với BullMQ và Redis cho việc xử lý tài liệu, đánh chỉ mục chatbot và tự động hoá quy trình
-        \item Cấu hình triển khai và giám sát với Docker, Nginx, \textbf{Prometheus} và \textbf{Loki} để vận hành production ổn định
-        \item Viết unit test với \textbf{Jest} và end-to-end test với \textbf{Cypress} cho các luồng nghiệp vụ quan trọng, tích hợp \textbf{SonarQube} vào quy trình phát triển để kiểm soát chất lượng mã nguồn backend
-        \item Nghiên cứu và chia sẻ các công nghệ, giải pháp tự động hoá phù hợp phục vụ định hướng chuyển đổi số
+        \item \textbf{Công nghệ:} Odoo Community, NestJS, Next.js, TypeScript, Payload CMS, FastAPI, PostgreSQL, Redis, BullMQ, Qdrant, LlamaIndex, Jest, Cypress, Docker
+        \item Tham gia migration theo giai đoạn từ \textbf{ERP Bravo} cũ sang \textbf{Odoo Community} (kho, dữ liệu khách hàng, báo cáo tài chính); thiết kế schema cơ sở dữ liệu và RESTful API cho các module nội bộ
+        \item Xây dựng và triển khai \textbf{toanthang.vn} --- nền tảng doanh nghiệp song ngữ trên Next.js, NestJS, PostgreSQL, Redis và Payload CMS, chạy trên Docker và Nginx, giám sát bằng \textbf{Prometheus} và \textbf{Loki}
+        \item Phát triển \textbf{chatbot RAG} (FastAPI, LlamaIndex, Qdrant) trả lời câu hỏi khách hàng từ tài liệu công ty, với pipeline BullMQ/Redis xử lý và đánh chỉ mục tài liệu
+        \item Viết unit test với \textbf{Jest}, end-to-end test với \textbf{Cypress} cho các luồng quan trọng và tích hợp quality gate \textbf{SonarQube} vào quy trình phát triển
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -43,27 +58,9 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Công nghệ:} React, TypeScript, Node.js/NestJS, Prisma, PostgreSQL, Redis, Docker, LangChain.js, LangGraph
-        \item Thiết kế kiến trúc và phát triển nền tảng \textbf{SaaS multi-tenant} hoàn chỉnh từ đầu, ứng dụng AI để tự động hoá và tối ưu quy trình digital marketing cho doanh nghiệp
-        \item Xây dựng \textbf{Multi-Agent AI Content Planner} bằng LangChain.js và LangGraph, điều phối 5 AI agent chuyên biệt (Trend, Strategy, Content, QA, Reminder) với luồng streaming thời gian thực qua Server-Sent Events (SSE)
-        \item Thiết kế engine \textbf{``Business DNA''}, chuẩn hoá bộ nhận diện thương hiệu thành ngữ cảnh sẵn sàng cho LLM với prompt builder động, quản lý token thông minh và caching bằng Redis nhằm giữ nhất quán giọng điệu thương hiệu
-        \item Triển khai giao diện \textbf{Multimodal AI Chat} có khả năng hiểu hình ảnh và xử lý tài liệu, cho phép người dùng điều khiển hệ thống bằng ngôn ngữ tự nhiên
-        \item Phát triển tính năng đăng bài và lên lịch đa nền tảng (Facebook, Instagram, TikTok, Threads, Zalo OA) cùng pipeline News-to-Content dựa trên AI và phân tích cảm xúc
-        \item Xây dựng kiến trúc full-stack có khả năng mở rộng, tự phát triển thư viện UI component (design system) và quản lý vòng đời schema cơ sở dữ liệu bằng \textbf{Prisma ORM}
-    \end{highlights}
-\end{onecolentry}
-\vspace{0.2 cm}
-
-% --- MindX ---
-\begin{twocolentry}{\textit{06/2025 -- 12/2025}}
-    \textbf{Trường Công nghệ MindX} \\[4pt]
-    \textit{Giáo viên Lập trình (Bán thời gian)}
-\end{twocolentry}
-\begin{onecolentry}
-    \begin{highlights}
-        \item \textbf{Giảng dạy lập trình:} Giảng dạy các khái niệm lập trình từ nền tảng đến nâng cao cho học viên độ tuổi 8--16
-        \item \textbf{Học qua dự án:} Hướng dẫn học viên đi qua trọn vòng đời phát triển phần mềm, từ ý tưởng đến triển khai ứng dụng và website
-        \item \textbf{Cố vấn \& review:} Thực hiện code review và phản hồi cá nhân hoá nhằm rèn luyện khả năng tự giải quyết vấn đề cho học viên
+        \item Thiết kế kiến trúc và xây dựng nền tảng \textbf{SaaS multi-tenant} từ đầu (React, TypeScript, NestJS, Prisma, PostgreSQL), kèm thư viện UI component riêng
+        \item Xây dựng \textbf{Multi-Agent AI Content Planner} bằng LangChain.js và LangGraph, điều phối 5 agent chuyên biệt (Trend, Strategy, Content, QA, Reminder) với streaming thời gian thực qua SSE
+        \item Phát triển đăng bài và lên lịch trên 5 nền tảng (Facebook, Instagram, TikTok, Threads, Zalo OA), dựa trên engine \textbf{``Business DNA''} chuẩn hoá nhận diện thương hiệu thành ngữ cảnh cho LLM, caching bằng Redis
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -75,8 +72,19 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Tự động hoá end-to-end:} Xây dựng các workflow ổn định bằng \textbf{n8n} và Python, tích hợp API bên thứ ba trong môi trường production thực tế, bao gồm AI hội thoại phục vụ bán hàng và chăm sóc khách hàng
-        \item \textbf{Chiến lược AI \& R\&D:} Chủ động nghiên cứu, dựng prototype và đưa các công cụ AI mới vào ứng dụng để giải quyết các bài toán trọng yếu của doanh nghiệp
+        \item Xây dựng workflow tự động hoá production bằng \textbf{n8n} và Python, tích hợp API bên thứ ba và AI hội thoại cho bán hàng và chăm sóc khách hàng
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+% --- MindX ---
+\begin{twocolentry}{\textit{06/2025 -- 12/2025}}
+    \textbf{Trường Công nghệ MindX} \\[4pt]
+    \textit{Giáo viên Lập trình (Bán thời gian)}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Dạy lập trình cho học viên 8--16 tuổi theo phương pháp học qua dự án, kèm code review và phản hồi cá nhân hoá
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -88,9 +96,8 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Phát triển full-stack:} Thiết kế kiến trúc và triển khai hệ thống backend hiệu năng cao (Python/Flask, PostgreSQL) kết hợp frontend động (Vue.js)
-        \item \textbf{DevOps \& triển khai:} Đảm bảo môi trường production an toàn, ổn định và có khả năng mở rộng bằng Docker và Nginx
-        \item \textbf{Tự động hoá quy trình:} Triển khai các workflow n8n tối ưu vận hành nội bộ, bao gồm tự động đăng nội dung SEO, quản lý email và xử lý tác vụ
+        \item Xây dựng và triển khai hệ thống web full-stack với Python/Flask, PostgreSQL và Vue.js trên Docker và Nginx
+        \item Tự động hoá vận hành nội bộ bằng workflow n8n cho đăng nội dung SEO, quản lý email và xử lý tác vụ
     \end{highlights}
 \end{onecolentry}
 
@@ -98,20 +105,21 @@
 \section{Kỹ năng Công nghệ}
 \begin{onecolentry}
 \begin{highlights}
-    \item \textbf{Backend \& Web API:} Node.js, NestJS, RESTful API, FastAPI, Prisma, PostgreSQL, Redis, BullMQ, Odoo
-    \item \textbf{Frontend:} React, Next.js, TypeScript, HTML5, CSS3, Tailwind CSS, Payload CMS
-    \item \textbf{AI \& Hệ thống RAG:} LangChain.js, LangGraph, LlamaIndex, Qdrant, điều phối multi-agent
-    \item \textbf{SaaS \& Hệ thống Doanh nghiệp:} SaaS multi-tenant, migration ERP, CMS, kiến trúc sẵn sàng cho eCommerce
-    \item \textbf{DevOps \& Giám sát:} Docker, Nginx, CI/CD cơ bản, Prometheus, Loki
-    \item \textbf{Kiểm thử \& Chất lượng mã nguồn:} Jest, Cypress/Playwright, SonarQube, code review
-    \item \textbf{Thực hành Kỹ thuật:} Git/GitHub, GitLab, clean code, unit testing cơ bản
+    \item \textbf{Frontend:} React, Next.js, TypeScript, TanStack Query, Jotai, Tailwind CSS, Zalo Mini App, Payload CMS
+    \item \textbf{Backend:} Node.js, NestJS, Medusa v2, FastAPI, RESTful API, OpenAPI, Zod, Odoo
+    \item \textbf{Cơ sở dữ liệu \& Messaging:} PostgreSQL (thiết kế schema, index, tối ưu truy vấn), Drizzle, Prisma, Redis, RabbitMQ, BullMQ, Qdrant
+    \item \textbf{Kiến trúc:} event-driven, transactional outbox, idempotency, state machine, design pattern (DI, repository), monorepo (Turborepo, pnpm)
+    \item \textbf{DevOps \& Observability:} Docker, GitHub Actions, Linux VPS, Nginx, Trivy, OpenTelemetry, Grafana (Tempo, Loki, Prometheus), k6
+    \item \textbf{Kiểm thử \& Chất lượng:} Vitest, Jest, Cypress, Playwright, pytest, SonarQube, Git, code review
+    \item \textbf{AI:} LangChain.js, LangGraph, LlamaIndex, RAG, điều phối multi-agent
 \end{highlights}
 \end{onecolentry}
 
 \section{Thành tựu}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Giải Nhì Nghiên cứu Khoa học cấp Trường} --- Đại học Tôn Đức Thắng (2025). Phát triển ứng dụng dùng nhận dạng giọng nói và NLP để đưa ra phản hồi cá nhân hoá và chấm điểm tự động cho phần thi IELTS Speaking và Writing.
-        \item \textbf{Giải Ba Nghiên cứu Khoa học cấp Trường} --- Đại học Tôn Đức Thắng (2024). Nghiên cứu nhận diện thực thể tự động trong sơ đồ Thực thể --- Quan hệ (ERD) bằng các kỹ thuật xử lý ngôn ngữ tự nhiên.
+        \item \textbf{Giải Khuyến khích Nghiên cứu Khoa học cấp Trường} (TDTU, 2026) --- 3D CNN gọn nhẹ phân đoạn đứt gãy địa chấn; MeanIoU 0.754 $\rightarrow$ 0.805, nhỏ hơn \textasciitilde17 lần mô hình tham chiếu
+        \item \textbf{Giải Nhì Nghiên cứu Khoa học cấp Trường} (TDTU, 2025) --- ứng dụng nhận dạng giọng nói và NLP chấm điểm, phản hồi tự động cho IELTS Speaking và Writing
+        \item \textbf{Giải Ba Nghiên cứu Khoa học cấp Trường} (TDTU, 2024) --- nhận diện thực thể tự động trong sơ đồ ERD bằng xử lý ngôn ngữ tự nhiên
     \end{highlights}
 \end{onecolentry}
